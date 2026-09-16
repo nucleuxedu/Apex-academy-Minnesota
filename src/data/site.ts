@@ -12,8 +12,8 @@ export const SITE = {
     inquiry: "info@mnprepacademy.com",
   },
   donationUrl: "https://square.link/u/BU2r9ax8?src=sheet",
-  termsUrl: "https://ashanillc.wixsite.com/mysite-1/terms-of-use",
-  privacyUrl: "https://ashanillc.wixsite.com/mysite-1/privacy-policy",
+  termsUrl: "/terms-of-use",
+  privacyUrl: "/privacy-policy",
   images: {
     logo: "https://static.wixstatic.com/media/2e39a0_11e16c8f070d4fb3939910befc407b05~mv2.png",
     mark: "https://static.wixstatic.com/media/2e39a0_4c1826bba58f41a889c808d7f1bd43be~mv2.png",
@@ -23,10 +23,10 @@ export const SITE = {
       "https://static.wixstatic.com/media/2e39a0_620f62913e6d4845bbbdb9c293f3d2f8~mv2.png",
   },
   social: [
-    { label: "Facebook", href: "https://www.facebook.com/wix" },
-    { label: "Twitter", href: "https://www.twitter.com/wix" },
-    { label: "YouTube", href: "https://www.youtube.com/user/Wix" },
-    { label: "Instagram", href: "https://instagram.com/wix/" },
+    { label: "Facebook", href: "https://www.facebook.com/" },
+    { label: "Twitter", href: "https://www.twitter.com/" },
+    { label: "YouTube", href: "https://www.youtube.com/" },
+    { label: "Instagram", href: "https://instagram.com/" },
   ],
 } as const;
 
@@ -97,7 +97,44 @@ export const ABOUT = {
     "Minnesota Preparatory Academy is a multicultural National Preparatory High School created to address the opportunity gaps by not only developing innovative programs for young men & women of color in underserved communities in Minnesota and across the country but also by bringing together hands on, grassroots programs based in education, athletics, trades, and the arts.",
     "These interventions focus on building core life and leadership skills through the use of education, athletics, trades, and the arts.",
     "All children have the talent and ability to be successful. Young men & women of color have a unique set of life experiences that is not being tapped. Setting higher expectations for our young men & women of color is critical to building stronger viable inner-city communities. Creating an environment of mutual respect and understanding amongst all students, families, faculty, and staff.",
-    "At Minnesota Preparatory Academy, we believe that all young men and women can embrace who they are, define their future, and make a positive impact on the world.",
+  ],
+    quote : "At Minnesota Preparatory Academy, we believe that all young men and women can embrace who they are, define their future, and make a positive impact on the world.",
+
+  galleryTitle: "Athletics & Student Life",
+  galleryIntro:
+    "A college-style look at Minnesota Prep on the court — competition, teamwork, and the student-athlete experience.",
+  gallery: [
+    {
+      src: "/images/01.png",
+      alt: "Minnesota Prep athlete dunking during a game",
+      area: "dunk",
+    },
+    {
+      src: "/images/03.png",
+      alt: "Minnesota Prep player competing in the paint",
+      area: "contest",
+    },
+    {
+      src: "/images/02.png",
+      alt: "Minnesota Prep basketball team together after a game",
+      area: "team",
+    },
+    
+    {
+      src: "/images/04.png",
+      alt: "Minnesota Prep guard driving against a defender",
+      area: "drive",
+    },
+    {
+      src: "/images/05.png",
+      alt: "Minnesota Prep teammates connecting during a game",
+      area: "huddle",
+    },
+    {
+      src: "/images/06.png",
+      alt: "Minnesota Prep player at the free-throw line",
+      area: "focus",
+    },
   ],
   missionTitle: "Our Mission",
   mission:
@@ -259,4 +296,28 @@ export const FILE_SHARE = {
   title: "File Share | Minnesota Preparatory Academy",
   heading: "File Share",
   empty: "Sign in to view shared files.",
+} as const;
+
+export const TERMS = {
+  title: "Terms of Use | Minnesota Preparatory Academy",
+  heading: "School Policies",
+  body: "Minnesota Preparatory Academy is committed to providing a safe and inclusive learning environment for all students. Our school policies are designed to ensure that every student feels valued and respected, and that their rights are protected. We encourage all members of our school community to familiarize themselves with our policies and uphold the values of our institution.",
+  supportTitle: "Support Our Mission",
+  supportCta: "Get Involved",
+  supportHref: "/support-us",
+} as const;
+
+export const PRIVACY = {
+  title: "Privacy Policy | Minnesota Preparatory Academy",
+  heading: "Privacy Policy",
+  intro:
+    "I’m a privacy policy section. I’m a great place to inform your visitors about how you use, store, and protect their personal information. Add details such as what information you collect, whether it be email addresses, names or phone numbers, why you collect this information, and how you use it.",
+  body: "Your user’s privacy is of the highest importance to your organization, so take the time to write an accurate and detailed policy. Use straightforward language to gain their trust and make sure they keep coming back to your site!",
+  securityTitle: "Safety and Security",
+  securityIntro:
+    "I’m a safety and security section. As part of a privacy policy, in this section you can inform your visitors about how safely you protect their personal information. Add details such as encryption methods you may use, firewalls employed on your servers, or other security measures you my employ.",
+  securityBody:
+    "Your user’s security is of the highest importance to your organization, so take the time to write an accurate and detailed policy. Use straightforward language to gain their trust and make sure they keep coming back to your site!",
+  supportCta: "We Need Your Support Today!",
+  supportHref: "/support-us",
 } as const;

@@ -63,7 +63,8 @@ export default function Header() {
               mr: { md: 1 },
             }}
           >
-            <Box
+          
+            {/* <Box
               sx={{
                 width: 52,
                 height: 52,
@@ -78,15 +79,15 @@ export default function Header() {
                 sizes="52px"
                 style={{ objectFit: "contain" }}
               />
-            </Box>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            </Box> */}
+            <Box >
               <Typography
-                variant="subtitle2"
+                variant="h5"
                 sx={{ fontWeight: 800, letterSpacing: 1, lineHeight: 1 }}
               >
                 MPA
               </Typography>
-              <Typography variant="caption" color="text.secondary">
+              <Typography variant="body1" color="text.secondary">
                 Minnesota Prep Academy
               </Typography>
             </Box>

@@ -142,9 +142,11 @@ export default function HomePage() {
                 sx={{
                   borderRadius: 4,
                   minHeight: { xs: 280, md: 380 },
-                  backgroundImage: `linear-gradient(180deg, rgba(16,31,70,0.15), rgba(16,31,70,0.55)), url(${SITE.images.support})`,
-                  backgroundSize: "cover",
+                  backgroundImage: `url(${SITE.images.support})`,
+                  backgroundSize: "400px 200px",
                   backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundColor: "black",
                 }}
               />
             </Grid>

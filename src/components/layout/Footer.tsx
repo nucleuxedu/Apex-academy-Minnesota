@@ -97,21 +97,11 @@ export default function Footer() {
 
         <Typography variant="body2" sx={{ opacity: 0.78 }}>
           © 2024. All Rights Reserved Minnesota Preparatory Academy |{" "}
-          <MuiLink
-            href={SITE.termsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            color="inherit"
-          >
+          <MuiLink component={NextLink} href={SITE.termsUrl} color="inherit">
             Terms of Use
           </MuiLink>{" "}
           |{" "}
-          <MuiLink
-            href={SITE.privacyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            color="inherit"
-          >
+          <MuiLink component={NextLink} href={SITE.privacyUrl} color="inherit">
             Privacy Policy
           </MuiLink>
         </Typography>

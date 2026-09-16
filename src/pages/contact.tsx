@@ -31,6 +31,7 @@ export default function ContactPage() {
                 borderRadius: 3,
                 overflow: "hidden",
                 minHeight: 280,
+                backgroundColor:"black",
                 mb: 3,
               }}
             >
@@ -39,7 +40,7 @@ export default function ContactPage() {
                 alt="Minnesota Preparatory Academy"
                 fill
                 sizes="(max-width: 900px) 100vw, 40vw"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
               />
             </Box>
             <Typography variant="h6">{SITE.name}</Typography>

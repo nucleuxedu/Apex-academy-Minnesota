@@ -103,8 +103,8 @@ export default function TuitionAndFeesPage() {
         <Grid container spacing={2} sx={{ mb: 3 }}>
           {TUITION.paymentPlans.map((plan) => (
             <Grid key={plan} size={{ xs: 12, md: 6 }}>
-              <Card>
-                <CardContent>
+              <Card sx={{maxHeight:100,minHeight:100,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",}}>
+                <CardContent >
                   <Typography variant="h6">{plan}</Typography>
                 </CardContent>
               </Card>
