@@ -47,7 +47,7 @@ export default function Header() {
 
   return (
     <Box component="header" sx={{ position: "sticky", top: 0, zIndex: 1200 }}>
-      <Box sx={{ bgcolor: colors.ink, color: "#f4efe6", borderBottom: "1px solid", borderColor: "secondary.main" }}>
+      {/* <Box sx={{ bgcolor: colors.ink, color: "#f4efe6", borderBottom: "1px solid", borderColor: "secondary.main" }}>
         <Container
           maxWidth="xl"
           sx={{
@@ -98,7 +98,7 @@ export default function Header() {
             </IconButton>
           </Box>
         </Container>
-      </Box>
+      </Box> */}
 
       <AppBar position="static" elevation={0} sx={{ bgcolor: colors.paper, color: colors.ink, borderBottom: "1px solid", borderColor: "divider" }}>
         <Toolbar
@@ -184,10 +184,28 @@ export default function Header() {
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        slotProps={{ paper: { sx: { width: 320, bgcolor: colors.ink, color: "#f4efe6" } } }}
+        slotProps={{
+          paper: {
+            sx: {
+              width: 320,
+              bgcolor: colors.ink,
+              color: "secondary.main",
+              "& .MuiListItemText-primary": {
+                color: "secondary.main",
+                fontWeight: 600,
+              },
+              "& .MuiListItemText-secondary": {
+                color: "secondary.main",
+              },
+              "& .MuiSvgIcon-root": {
+                color: "secondary.main",
+              },
+            },
+          },
+        }}
       >
         <Box sx={{ pt: 3 }} role="presentation">
-          <Typography variant="overline" sx={{ px: 3, display: "block" }}>
+          <Typography variant="overline" sx={{ px: 3, display: "block", color: "secondary.main" }}>
             Menu
           </Typography>
           <List>
