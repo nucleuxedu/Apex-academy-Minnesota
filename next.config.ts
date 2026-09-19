@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "static.wixstatic.com",
+        hostname: "veritasclassical.org",
       },
     ],
   },

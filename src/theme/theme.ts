@@ -1,133 +1,110 @@
 import { createTheme } from "@mui/material/styles";
+import { Lato, Libre_Baskerville } from "next/font/google";
 
-const navy = "#101F46";
-const navyMid = "#213E8C";
-const gold = "#FFCB05";
-const ink = "#111111";
+export const lato = Lato({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const libreBaskerville = Libre_Baskerville({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+});
+
+const burgundy = "#86191b";
+const gold = "#e58926";
+const ink = "#333333";
+const muted = "#747474";
+const cream = "#f2f1f0";
+const navy = "#333c4e";
 
 const theme = createTheme({
   palette: {
-    mode: "light",
-    primary: {
-      main: navy,
-      dark: "#0A142E",
-      light: navyMid,
-      contrastText: "#ffffff",
-    },
-    secondary: {
-      main: gold,
-      contrastText: navy,
-    },
-    background: {
-      default: "#F7F8FB",
-      paper: "#ffffff",
-    },
-    text: {
-      primary: ink,
-      secondary: "#404040",
-    },
-    divider: "rgba(16, 31, 70, 0.12)",
+    primary: { main: burgundy, contrastText: "#ffffff" },
+    secondary: { main: gold, contrastText: "#ffffff" },
+    background: { default: "#ffffff", paper: "#ffffff" },
+    text: { primary: ink, secondary: muted },
+    divider: "#e0dede",
   },
   typography: {
-    fontFamily: [
-      "var(--font-body)",
-      "Georgia",
-      "Times New Roman",
-      "Times",
-      "serif",
-    ].join(","),
+    fontFamily: lato.style.fontFamily,
     h1: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 700,
-      letterSpacing: "-0.03em",
+      fontFamily: libreBaskerville.style.fontFamily,
+      fontWeight: 400,
+      fontSize: "2.125rem",
+      lineHeight: 1.2,
+      color: burgundy,
     },
     h2: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 700,
-      letterSpacing: "-0.02em",
+      fontFamily: libreBaskerville.style.fontFamily,
+      fontWeight: 400,
+      fontSize: "1.75rem",
+      lineHeight: 1.25,
+      color: burgundy,
     },
     h3: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 700,
-      letterSpacing: "-0.02em",
+      fontFamily: libreBaskerville.style.fontFamily,
+      fontWeight: 400,
+      fontSize: "1.4rem",
+      lineHeight: 1.3,
+      color: navy,
     },
     h4: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 600,
+      fontFamily: libreBaskerville.style.fontFamily,
+      fontWeight: 400,
+      fontSize: "1.2rem",
+      lineHeight: 1.35,
+      color: burgundy,
     },
-    h5: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 600,
-    },
-    h6: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 600,
-    },
-    button: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-      fontWeight: 600,
-      textTransform: "none",
-      letterSpacing: "0.02em",
-    },
-    subtitle1: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-    },
-    subtitle2: {
-      fontFamily: "var(--font-display), Poppins, sans-serif",
-    },
+    body1: { fontSize: "1rem", lineHeight: 1.7, color: ink },
+    body2: { fontSize: "0.95rem", lineHeight: 1.7, color: muted },
+    button: { textTransform: "none", fontWeight: 700, letterSpacing: 0.2 },
   },
-  shape: {
-    borderRadius: 12,
-  },
+  shape: { borderRadius: 8 },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 999,
-          paddingInline: 22,
-          paddingBlock: 10,
-          transition:
-            "transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease",
+          borderRadius: 7,
+          padding: "10px 22px",
+          transition: "background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease",
+          "&:hover": { transform: "translateY(-1px)" },
         },
         contained: {
           boxShadow: "none",
-          "&:hover": {
-            transform: "translateY(-2px)",
-            boxShadow: "0 10px 24px rgba(16, 31, 70, 0.22)",
-          },
-        },
-        outlined: {
-          "&:hover": {
-            transform: "translateY(-2px)",
-          },
+          "&:hover": { boxShadow: "0 8px 18px rgba(134,25,27,0.25)" },
         },
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 16,
-          boxShadow: "0 10px 30px rgba(16, 31, 70, 0.08)",
-          transition: "transform 0.35s ease, box-shadow 0.35s ease",
+          boxShadow: "0 8px 24px rgba(51,60,78,0.08)",
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
           "&:hover": {
-            transform: "translateY(-6px)",
-            boxShadow: "0 18px 40px rgba(16, 31, 70, 0.14)",
+            transform: "translateY(-4px)",
+            boxShadow: "0 14px 32px rgba(51,60,78,0.14)",
           },
         },
       },
     },
     MuiLink: {
-      defaultProps: {
-        underline: "hover",
+      styleOverrides: {
+        root: { color: burgundy, fontWeight: 700 },
       },
     },
-    MuiTextField: {
-      defaultProps: {
-        variant: "outlined",
-        fullWidth: true,
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: { backgroundColor: cream },
+        a: { color: burgundy },
+        img: { maxWidth: "100%", height: "auto" },
       },
     },
   },
 });
 
 export default theme;
+export const colors = { burgundy, gold, ink, muted, cream, navy };

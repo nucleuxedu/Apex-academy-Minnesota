@@ -1,152 +1,74 @@
-import PageHero from "@/components/layout/PageHero";
-import { ABOUT } from "@/data/site";
-import { Box, Card, CardContent, Container, Grid, Typography } from "@mui/material";
-import Head from "next/head";
-import Image from "next/image";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import PageShell from "@/components/layout/PageShell";
+import IframeEmbed from "@/components/common/IframeEmbed";
+import ContentImage from "@/components/common/ContentImage";
+import LinkCard from "@/components/sections/LinkCard";
+import SiteLink from "@/components/common/SiteLink";
+import { aboutLinks, site } from "@/data/site";
 
 export default function AboutPage() {
   return (
-    <>
-      <Head>
-        <title>{ABOUT.title}</title>
-      </Head>
-      <PageHero title={ABOUT.heading} subtitle="Academic Programs" />
-      <Container maxWidth="lg" sx={{ py: { xs: 7, md: 10 } }}>
-        <Box sx={{ maxWidth: 860, mb: 6 }}>
-          {ABOUT.body.map((paragraph) => (
-            <Typography
-              key={paragraph}
-              variant="body1"
-              sx={{ mb: 2.5, fontSize: 18, lineHeight: 1.85 }}
-            >
-              {paragraph}
+    <PageShell
+      title="About Veritas - Veritas Academy Chisago City MN"
+      description="Veritas Academy is a classical Christian school dedicated to the cultivation of wisdom and virtue."
+      showWhatSetsApart={false}
+      sidebar={
+        <>
+          <LinkCard title="About" links={aboutLinks} />
+          <Box sx={{ p: 2, bgcolor: "#f6f6f6", borderRadius: 2, mb: 3 }}>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              <strong>We exist:</strong>
             </Typography>
-          ))}
-        </Box>
-
-        <Box sx={{ mb: { xs: 7, md: 9 } }}>
-          {/* <Typography variant="overline" sx={{ letterSpacing: 3, color: "secondary.main", fontWeight: 700 }}>
-            Minnesota Preparatory Academy
-          </Typography>
-          <Typography variant="h3" sx={{ mt: 1, mb: 1.5 }}>
-            {ABOUT.galleryTitle}
-          </Typography>
-          <Typography sx={{ mb: 4, fontSize: 18, lineHeight: 1.85, maxWidth: 720 }}>
-            {ABOUT.galleryIntro}
-          </Typography> */}
-
-          <Box
-            sx={{
-              display: "grid",
-              gap: { xs: 1.25, md: 1.5 },
-              gridTemplateColumns: {
-                xs: "1fr",
-                sm: "1fr 1fr",
-                md: "1.15fr 1fr 1fr",
-              },
-              gridTemplateRows: {
-                xs: "320px 240px 240px 240px 240px 320px",
-                sm: "260px 240px 260px",
-                md: "280px 240px 280px",
-              },
-              gridTemplateAreas: {
-                xs: `
-                  "dunk"
-                  "team"
-                  "contest"
-                  "drive"
-                  "huddle"
-                  "focus"
-                `,
-                sm: `
-                  "dunk team"
-                  "contest drive"
-                  "huddle focus"
-                `,
-                md: `
-                  "dunk team team"
-                  "dunk contest drive"
-                  "huddle huddle focus"
-                `,
-              },
-            }}
-          >
-            {ABOUT.gallery.map((image, index) => (
-              <Box
-                key={image.src}
-                sx={{
-                  gridArea: image.area,
-                  position: "relative",
-                  overflow: "hidden",
-                  borderRadius: 2,
-                  bgcolor: "primary.dark",
-                  "&:hover img": {
-                    transform: "scale(1.06)",
-                  },
-                  "&:hover .gallery-overlay": {
-                    opacity: 1,
-                  },
-                }}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  priority={index < 2}
-                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw"
-                  style={{
-                    objectFit: "contain",
-                    objectPosition: "center",
-                    transition: "transform 0.5s ease",
-                  }}
-                />
-                <Box
-                  className="gallery-overlay"
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    pointerEvents: "none",
-                    opacity: 0,
-                    transition: "opacity 0.35s ease",
-                    background:
-                      "linear-gradient(180deg, transparent 55%, rgba(10, 20, 46, 0.55) 100%)",
-                  }}
-                />
-              </Box>
-            ))}
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              <strong>For students</strong>: We equip students to lead with clarity and virtue, and to become mature adults who value truth, acknowledge God’s beauty, and do good (Daniel 1:4, Ephesians 2:10).
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              <strong>For parents</strong>: We collaborate with them in the responsibility of educating their children. (Proverbs 22:6).
+            </Typography>
+            <Typography variant="body1" sx={{ mb: 1 }}>
+              <strong>For our community</strong>: We support our great community while modeling excellence, integrity, and service to others. (Mark 10:45, Zechariah 1:17).
+            </Typography>
+            <Typography variant="body1">
+              <strong>For teachers</strong>: We affirm them in their calling as educators, support their maturing in Christ, and empower them to be effective and productive in the classroom. (2 Peter 1: 3-11).
+            </Typography>
           </Box>
-          <Typography variant="h5" sx={{  lineHeight: 1.85, textAlign: "center", mt: 4 }}>
-            {ABOUT.quote}
-          </Typography>
-        </Box>
-
-        <Grid container spacing={3}>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Card sx={{ height: "100%" }}>
-              <CardContent sx={{ p: 4 }}>
-                <Typography variant="h4" sx={{ mb: 2 }}>
-                  {ABOUT.missionTitle}
-                </Typography>
-                <Typography sx={{ fontSize: 17, lineHeight: 1.8 }}>
-                  {ABOUT.mission}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Card sx={{ height: "100%" }}>
-              <CardContent sx={{ p: 4 }}>
-                <Typography variant="h4" sx={{ mb: 2 }}>
-                  {ABOUT.visionTitle}
-                </Typography>
-                <Typography sx={{ fontSize: 17, lineHeight: 1.8 }}>
-                  {ABOUT.vision}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
-    </>
+          <ContentImage
+            src="https://veritasclassical.org/wp-content/uploads/2022/07/Map-of-School-2.png"
+            title="Map of School"
+            alt="Map of School"
+          />
+        </>
+      }
+    >
+      <Typography variant="h1" sx={{ mb: 2 }}>
+        About Veritas
+      </Typography>
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        Veritas Academy is a classical Christian school dedicated to the cultivation of wisdom and virtue.
+      </Typography>
+      <IframeEmbed src="https://player.vimeo.com/video/508172433?autoplay=0&autopause=0" title="Vimeo video player 1" height={350} />
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        At Veritas Academy, learning is designed to engage both the mind and the heart. Students are challenged to ask thoughtful questions, examine ideas carefully, develop sound reasoning, and communicate clearly.
+      </Typography>
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        Rather than focusing solely on the accumulation of information, we seek to cultivate wisdom and virtue through meaningful engagement with enduring ideas, important questions, and the accumulated wisdom of generations who have devoted themselves to the pursuit of truth and a deeper understanding of God, ourselves, and the world around us.
+      </Typography>
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        We believe the environment in which students learn matters. Through a{" "}
+        <SiteLink href={site.restfulLearningUrl}>restful learning environment</SiteLink>, limited screen use, meaningful relationships, and purposeful use of time, students are given opportunities to develop responsibility, self-management, healthy relationships, and sound judgment. Teachers know their students well and provide both encouragement and challenge as they grow.
+      </Typography>
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        At Veritas, education extends beyond academics. Students are encouraged to develop curiosity, perseverance, ownership, responsibility, and sound judgment while learning to engage thoughtfully with the world around them. Over time, students develop the wisdom, habits, and maturity necessary to thrive in the responsibilities, relationships, and realities of adult life.
+      </Typography>
+      <Typography variant="body1" sx={{ fontStyle: "italic", mb: 3 }}>
+        Then you will understand the fear of the Lord and find the knowledge of God. For the Lord gives wisdom; from His mouth come knowledge and understanding. –Proverbs 2:5-6
+      </Typography>
+      <ContentImage
+        src="https://veritasclassical.org/wp-content/uploads/2025/04/Basketball.png"
+        title="Basketball"
+        alt="Basketball"
+      />
+    </PageShell>
   );
 }

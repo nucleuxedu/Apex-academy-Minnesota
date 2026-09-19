@@ -1,323 +1,465 @@
-export const SITE = {
-  name: "Minnesota Preparatory Academy",
-  shortName: "MPA",
-  tagline: "Empowerment in Education",
+export const site = {
+  name: "Veritas Academy",
+  tagline: "Grounded in Truth. Guided by Wisdom. Marked by Virtue.",
   description:
-    "Minnesota Preparatory Academy is a multicultural National Preparatory High School created to address the opportunity gaps by not only developing innovative programs for young men & women of color in underserved communities in Minnesota and across the country but also to bring together hands on, grass roots programs based in education, athletics, trades and the arts. These interventions focus on building core life and leadership skills through the use of education, athletics, trades and the arts.",
-  address: "1115 Greenbrier Ave St Paul, MN 55106",
-  phone: "651-468-8024",
-  phoneHref: "tel:651-468-8024",
-  emails: {
-    contact: "info@minnesotaprepacademy.org",
-    inquiry: "info@mnprepacademy.com",
+    "Veritas Academy is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education.",
+  url: "https://veritasclassical.org/",
+  phoneDisplay: "763.670.0793",
+  phoneTel: "7636700793",
+  admissionsPhoneDisplay: "651.462.3894",
+  admissionsPhoneTel: "6514623894",
+  factsPhoneDisplay: "1 877-303-3039",
+  factsPhoneTel: "18773033039",
+  email: "admissions@veritasclassical.org",
+  generalEmail: "v@veritasclassical.org",
+  presidentEmail: "President@veritasclassical.org",
+  hours: "Monday – Friday: 8:00 AM – 3:30 PM",
+  taxId: "26-2949017",
+  logo: {
+    src: "https://veritasclassical.org/wp-content/uploads/2020/02/Weblogo-110h.png",
+    retina: "https://veritasclassical.org/wp-content/uploads/2020/03/logo-220so.png",
+    mobileRetina: "https://veritasclassical.org/wp-content/uploads/2020/02/Weblogo-220h.png",
+    width: 421,
+    height: 110,
+    alt: "Veritas Academy Chisago City MN Logo",
   },
-  donationUrl: "https://square.link/u/BU2r9ax8?src=sheet",
-  termsUrl: "/terms-of-use",
-  privacyUrl: "/privacy-policy",
-  images: {
-    logo: "https://static.wixstatic.com/media/2e39a0_11e16c8f070d4fb3939910befc407b05~mv2.png",
-    mark: "https://static.wixstatic.com/media/2e39a0_4c1826bba58f41a889c808d7f1bd43be~mv2.png",
-    contact:
-      "https://static.wixstatic.com/media/2e39a0_a2a79cc879114014a970f80d14f98c8b~mv2.jpg",
-    support:
-      "https://static.wixstatic.com/media/2e39a0_620f62913e6d4845bbbdb9c293f3d2f8~mv2.png",
-  },
-  social: [
-    { label: "Facebook", href: "https://www.facebook.com/" },
-    { label: "Twitter", href: "https://www.twitter.com/" },
-    { label: "YouTube", href: "https://www.youtube.com/" },
-    { label: "Instagram", href: "https://instagram.com/" },
+  favicon: "https://veritasclassical.org/wp-content/uploads/2020/02/cropped-Veritas-Site-Icon-32x32.png",
+  appleIcon: "https://veritasclassical.org/wp-content/uploads/2020/02/cropped-Veritas-Site-Icon-180x180.png",
+  locations: [
+    {
+      title: "Veritas Academy",
+      lines: ["11723 Stinson Avenue", "Chisago City, MN 55013"],
+    },
+    {
+      title: "Veritas Chapel",
+      lines: ["34888 Kable Avenue", "North Branch, MN 55056"],
+    },
   ],
-} as const;
-
-export type NavItem = {
-  label: string;
-  href: string;
-  external?: boolean;
+  social: [
+    { label: "Facebook", href: "https://www.facebook.com/veritasgecko/" },
+    { label: "Instagram", href: "https://www.instagram.com/veritasclassic" },
+    { label: "Email", href: "mailto:v@veritasclassical.org" },
+  ],
+  apps: {
+    android: {
+      href: "https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_JJKTS8&hl=en_US",
+      image: "https://veritasclassical.org/wp-content/uploads/2020/03/google-play-1.png",
+      alt: "Download Android App",
+    },
+    ios: {
+      href: "https://subsplash.com/veritasacademy/app",
+      image: "https://veritasclassical.org/wp-content/uploads/2020/03/app-store-logo-4.png",
+      alt: "Download iOS App",
+    },
+  },
+  copyright:
+    "Veritas Academy is a private K-12 classical Christian school serving North Branch, Cambridge, Forest Lake, Wyoming, Lindstrom, Stacy, Isanti, Chisago City.",
+  inquiryFormSrc: "https://api.leadconnectorhq.com/widget/form/uMUqtnL839IeTkgFajGQ",
+  contactFormSrc: "https://api.leadconnectorhq.com/widget/form/QRvSMV7Wwj8onyoDkoZ7",
+  givebutterId: "pdQN9j",
+  factsUrl: "https://online.factsmgt.com/signin/4J766",
+  intentToEnrollUrl: "https://veritasclassical.org/us-application/",
+  internationalApplicationUrl: "https://veritasclassical.org/international-student-application/",
+  faqUrl: "https://veritasclassical.org/questions/",
+  internationalFaqUrl: "https://veritasclassical.org/international-faqs/",
+  sevisFeeUrl: "https://fmjfee.com/i901fee/index.html#",
+  visaWaitTimesUrl:
+    "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html",
+  converaPayUrl: "https://students.convera.com/va#!",
+  theatreTicketsUrl: "https://veritasacademy.subspla.sh/5syftpt",
+  restfulLearningUrl: "https://myveritas.us/restful-learning/",
+  homepageVideoMobile: "https://veritasclassical.org/wp-content/uploads/2025/06/VA-Homepage-Video-New.mp4",
+  homepageVideoDesktop: "https://veritasclassical.org/wp-content/uploads/2026/04/VA-Homepage-Video-New-2-1.mp4",
 };
 
-export const NAV_ITEMS: NavItem[] = [
-  { label: "About", href: "/about" },
+export type NavChild = { label: string; href: string; children?: NavChild[] };
+export type NavItem = { label: string; href: string; children?: NavChild[] };
+
+export const mainNav: NavItem[] = [
+  { label: "Home", href: "/" },
   { label: "Academics", href: "/academics" },
-  { label: "Tuition and Fees", href: "/tuition-and-fees" },
-  { label: "Admissions", href: "/admissions" },
+  { label: "Student Life", href: "/student-life" },
   {
-    label: "Donation",
-    href: SITE.donationUrl,
-    external: true,
+    label: "Admissions",
+    href: "https://veritasclassical.org/admissions/",
+    children: [
+      { label: "Get Started", href: "/get-started" },
+      {
+        label: "International Students",
+        href: "/international-students",
+        children: [{ label: "International Student Get Started", href: "/get-started-international" }],
+      },
+    ],
   },
-  { label: "Application Inquiry", href: "/application-inquiry" },
-  { label: "Support Us", href: "/support-us" },
-  { label: "Contact", href: "/contact" },
-  { label: "File Share", href: "/file-share" },
+  { label: "Tuition & Financial Information", href: "/tuition" },
+  { label: "About Veritas", href: "/about" },
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "Donate", href: "/donate" },
 ];
 
-export const QUICK_LINKS = [
-  { label: "Support Us", href: "/support-us" },
-  { label: "News", href: "/" },
-  { label: "Contact", href: "/contact" },
-] as const;
+export const aboutLinks = [
+  { label: "What Parents Are Saying", href: "/testimonials" },
+  { label: "Core Values", href: "/core-values" },
+  { label: "Statement of Faith", href: "/statement-of-faith" },
+  { label: "Calendar", href: "/calendar" },
+  { label: "Contact Us", href: "/contact-us" },
+];
 
-export const HOME = {
-  title: "Home | Minnesota Prep Academy",
-  welcome: "Welcome to Minnesota Preparatory Academy",
-  vision: "Our Vision for Student Success",
-  admissions: "Admissions & Enrollment",
-  intro:
-    "Minnesota Preparatory Academy is an exclusive K-12 and Post Graduate institution that provides quality education and elite training for students. Our knowledgeable staff is committed to the success of our students and their future. We welcome you to explore what we do and how Minnesota Preparatory Academy can help you achieve your goals.",
-  empowerment: "Empowerment in Education",
-  join: "Join Our Community",
-  empowerSuccess: "Empower Student Success",
-  cards: [
-    {
-      title: "Academic Programs",
-      href: "/about",
-      description:
-        "Explore our history, mission, and the programs that prepare students for college, careers, and leadership.",
-    },
-    {
-      title: "Upcoming Events",
-      href: "/tuition-and-fees",
-      description:
-        "Review tuition, enrollment dates, and payment plans for the coming school year.",
-    },
-    {
-      title: "Apply Now",
-      href: "/application-inquiry",
-      description:
-        "Start your application inquiry and our team will send the full application shortly.",
-    },
-  ],
-} as const;
+export const knowVeritasLinks = [
+  { label: "Core Values", href: "/core-values" },
+  { label: "Statement of Faith", href: "/statement-of-faith" },
+  { label: "Contact Us", href: "/contact-us" },
+];
 
-export const ABOUT = {
-  title: "About | Minnesota Preparatory Academy",
-  heading: "School History",
-  body: [
-    "Minnesota Preparatory Academy is a multicultural National Preparatory High School created to address the opportunity gaps by not only developing innovative programs for young men & women of color in underserved communities in Minnesota and across the country but also by bringing together hands on, grassroots programs based in education, athletics, trades, and the arts.",
-    "These interventions focus on building core life and leadership skills through the use of education, athletics, trades, and the arts.",
-    "All children have the talent and ability to be successful. Young men & women of color have a unique set of life experiences that is not being tapped. Setting higher expectations for our young men & women of color is critical to building stronger viable inner-city communities. Creating an environment of mutual respect and understanding amongst all students, families, faculty, and staff.",
-  ],
-    quote : "At Minnesota Preparatory Academy, we believe that all young men and women can embrace who they are, define their future, and make a positive impact on the world.",
+export const programLinks = [
+  { label: "Academic Program", href: "/academics" },
+  { label: "School of Grammar (K-5)", href: "/academics#grammar" },
+  { label: "School of Logic (6-8)", href: "/academics#logic" },
+  { label: "School of Rhetoric (9-12)", href: "/academics#rhetoric" },
+  { label: "Athletics", href: "/athletics" },
+  { label: "The Arts", href: "/the-arts" },
+  { label: "Veritas Conservatory of Music", href: "/orchestra-and-more" },
+  { label: "Veritas Conservatory of Music Lessons", href: "/orchestra-and-more-lessons" },
+  { label: "Theatre", href: "/theatre-arts" },
+];
 
-  galleryTitle: "Athletics & Student Life",
-  galleryIntro:
-    "A college-style look at Minnesota Prep on the court — competition, teamwork, and the student-athlete experience.",
-  gallery: [
-    {
-      src: "/images/01.png",
-      alt: "Minnesota Prep athlete dunking during a game",
-      area: "dunk",
-    },
-    {
-      src: "/images/03.png",
-      alt: "Minnesota Prep player competing in the paint",
-      area: "contest",
-    },
-    {
-      src: "/images/02.png",
-      alt: "Minnesota Prep basketball team together after a game",
-      area: "team",
-    },
-    
-    {
-      src: "/images/04.png",
-      alt: "Minnesota Prep guard driving against a defender",
-      area: "drive",
-    },
-    {
-      src: "/images/05.png",
-      alt: "Minnesota Prep teammates connecting during a game",
-      area: "huddle",
-    },
-    {
-      src: "/images/06.png",
-      alt: "Minnesota Prep player at the free-throw line",
-      area: "focus",
-    },
-  ],
-  missionTitle: "Our Mission",
-  mission:
-    "Our mission is to provide a nurturing and challenging educational environment that empowers students to become critical thinkers, compassionate leaders, and lifelong learners.",
-  visionTitle: "Our Vision",
-  vision:
-    "Our vision is to create a supportive and inclusive community where every student feels valued, inspired, and prepared to contribute positively to society.",
-} as const;
+export const artsLinks = [
+  { label: "Veritas Conservatory of Music", href: "/orchestra-and-more" },
+  { label: "Veritas Conservatory of Music Lessons", href: "/orchestra-and-more-lessons" },
+  { label: "Theatre Arts", href: "/theatre-arts" },
+  { label: "Christmas at Veritas", href: "/christmas-at-veritas" },
+  { label: "Sights and Sounds", href: "/sights-and-sounds" },
+];
 
-export const ACADEMICS = {
-  title: "Academics | Minnesota Preparatory Academy",
-  heading: "Academics",
-  acellus: "Minnesota Preparatory Academy is powered by Acellus.",
-  postGradTitle: "Post Grad Program:",
-  pseoTitle: "PSEO (Post Secondary Education Options)",
-  pseoBody:
-    "Students at MPA have access to earning college credits while enrolled in our programs through our partnership with Sophia Learning.",
-  sophiaUrl: "https://www.sophia.org/online-college-credit/",
-  internationalTitle: "International Program Powered By",
-  internationalBody: ': Veritas Academy Minnesota "F1-Visa Certified"',
-} as const;
+export const lifeAtVeritasLinks = [
+  { label: "International Students Cost", href: "/international-student-cost" },
+  { label: "Make Payments", href: "/global-pay" },
+  { label: "Student Life", href: "/student-life" },
+  { label: "Athletics", href: "/athletics" },
+  { label: "The Arts", href: "/the-arts" },
+  { label: "SCIENCE at Veritas", href: "/science" },
+];
 
-export const ADMISSIONS = {
-  title: "Admissions | Minnesota Preparatory Academy",
-  heading: "The Admissions Process",
-  intro:
-    "The admissions process begins in the SPRING before the desired year of enrollment. Decisions are generally made in late May through early July of each year. Admittance is based on a candidate’s entire profile, which includes an academic evaluation administered by Minnesota Preparatory Academy Admission staff, Standardized Test Scores (SAT/ACT), and student telephone interviews. All admission evaluations are standardized and age-appropriate.",
-  steps: [
-    {
-      title: "Step 1",
-      body: "We invite all prospective families to attend an open house or information session held numerous times throughout the Spring and Summer months. The sessions will provide a broad view of the school, our history, and our mission. It is an opportunity to hear from our President, Donnell Bratton as well as administration and staff.",
-    },
-    {
-      title: "Step 2",
-      body: "Please send the information through the online Inquiry tab in the application. Our administration will then send you the application via email. A link to submit the $50.00 application fee will also be provided for processing.",
-    },
-    {
-      title: "Step 3",
-      body: "Submit all OFFICIAL high school transcripts.",
-    },
-    {
-      title: "Step 4",
-      body: "Complete Final Evaluation (conducted and scheduled by the Admissions Director). Evaluations are conducted between May 5th and July 30th (Monday-Friday). This evaluation will allow both families and Minnesota Preparatory Academy staff to ensure that all details are agreed upon. This call is also a time for us to begin to familiarize ourselves with the student and their goals. The following will be discussed in full during the final interview",
-      bullets: [
-        "Student evaluation (questions regarding academics, behavior and goals)",
-        "Review of Financial Aid needs & Tuition information",
-        "Review of parent obligations during the school year",
-      ],
-    },
-    {
-      title: "Step 5",
-      body: "Receive admissions decision via mail (and email).",
-    },
-  ],
-} as const;
+export const exploreLinks = [
+  { label: "Athletics", href: "/athletics" },
+  { label: "The Arts", href: "/the-arts" },
+  { label: "SCIENCE at Veritas", href: "/science" },
+  { label: "Student Life", href: "/student-life" },
+];
 
-export const TUITION = {
-  title: "Tuition and Fees | Minnesota Preparatory Academy",
-  heading: "Tuition and Fees",
-  highSchoolTitle: "High School Students",
-  postGradTitle: "Post Graduate Students",
-  rates: [
-    { label: "On-campus Student (Annually)", amount: "$20,500.00" },
-    { label: "Day Student (Annually)", amount: "$16,500.00" },
-  ],
-  additionalTitle: "Additional costs (All Students ):",
-  additional: [
-    "Meals (during travel) It is REQUIRED that you provide your student with a weekly stipend during basketball season for meals while we are traveling. These meals outside of the campus are not included in the tuition cost. Funding is needed for this such as light snacks and can include full dinners.",
-    "Toiletries/Personal Products. It is REQUIRED that you provide your student and monthly stipend (year around) for everyday items such as (shampoo, soap, laundry products, etc). Minnesota Preparatory Academy DOES NOT supply these items. We do however make weekly trips to the store to ensure that students are able to purchase these items.",
-  ],
-  enrollmentTitle: "Enrollment Fee and Contract",
-  enrollmentFee:
-    "A non-refundable enrollment fee of $4,500.00 for students is due on the following enrollment dates.",
-  enrollmentDates: [
-    "June 1st (Early Enrollment)",
-    "June 20th",
-    "July 15th (Late Enrollment includes $50.00 fee)",
-  ],
-  enrollmentNote:
-    "This payment will be applied to the total tuition balance and secures your students place in our academy and on our roster. After the due date of July 15th, a place in the class can no longer be assured.",
-  paymentTitle: "Tuition Payment Options",
-  paymentPlans: [
-    "One-Payment Plan",
-    "Two-Payment Plan",
-    "Ten-Payment Plan",
-    "Extended Tuition Plan- (form of financial aid, please ask admissions director for details)",
-  ],
-  paymentNote:
-    "Minnesota Preparatory Academy’s payment plans enable families to spread tuition payments over the school year as opposed to paying the tuition in one total sum. Families will be billed in an automatic bank draft by the Business Office according to their payment-plan selection.",
-  contact:
-    "Please contact Donnell Bratton, Administrative Director, 651-468-8024 with any questions.",
-} as const;
+export const testimonials = [
+  "We want the best life for our child. A best life starts with a strong foundation. Veritas Academy is that foundation. We couldn’t be happier with our choice to choose Veritas.",
+  "Because of Veritas Academy’s commitment to students, my children are motivated to learn, they are challenged at their skill level instead of being held back due to their ages.",
+  "Transition from other educational models is seamlessly supported. Staff and teachers are proactive and caring to the smallest detail. Leadership goes above and beyond for ALL students.",
+  "Veritas Academy prepared my child for college. His biology professor said his papers are some of the best first-time college papers she has ever seen.",
+];
 
-export const SUPPORT = {
-  title: "Support Us | Minnesota Preparatory Academy",
-  heading: "Support Our Academy",
-  join: "Join Our Community",
-  intro:
-    "Minnesota Preparatory Academy is an exclusive K-12 and Post Graduate institution that provides quality education and elite training for students. Our knowledgeable staff is committed to the success of our students and their future. We welcome you to explore what we do and how Minnesota Preparatory Academy can help you achieve your goals.",
-  eventsCta: "View Upcoming Events",
-  involved: "Get Involved Today",
-  waysTitle: "Ways to Support Our Mission:",
-  ways: [
-    {
-      title: "In-Person Donation",
-      body: `Visit Us at :\n${SITE.address}`,
-    },
-    {
-      title: "Online Donation",
-      body: "Make a secure and tax-deductible donation online.",
-      cta: "Donate Now",
-      href: SITE.donationUrl,
-    },
-    {
-      title: "Donate Over the Phone",
-      body: "Support our academy by donating over the phone. Our team is available to assist you. Tel: 651-468-8024",
-    },
-  ],
-} as const;
+export const whatSetsApart = [
+  {
+    title: "Small Class Sizes",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/09/Small-Class-Sizes.png",
+    imageTitle: "Small Class Sizes",
+    href: "https://veritasclassical.org/class-size/",
+    body: "Students are known and taught with intention. Teachers understand each student’s strengths and needs, allowing for meaningful growth that large classrooms cannot provide.",
+  },
+  {
+    title: "Christian Formation",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/09/Prayer.png",
+    imageTitle: "Prayer",
+    href: "https://veritasclassical.org/christianformation/",
+    body: "Students are grounded in Biblical truth and taught to live with wisdom and virtue. In a culture that often pulls in the opposite direction, we provide clarity, direction, and consistency.",
+  },
+  {
+    title: "Academic Placement",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/09/Academic-Acceleration.png",
+    imageTitle: "Academic Acceleration",
+    href: "https://veritasclassical.org/academic-placement/",
+    body: "Students are placed according to ability and readiness, allowing them to be challenged without being overwhelmed. Instruction is structured, purposeful, and responsive to each student’s progress.",
+  },
+  {
+    title: "Intentional Teaching",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/09/Caring-Teachers_2024.png",
+    imageTitle: "Caring Teachers_2024",
+    href: "https://veritasclassical.org/intentional-teaching/",
+    body: "Teachers build strong relationships with students while maintaining clear expectations. Students are supported, challenged, and held accountable in a consistent and structured environment.",
+  },
+];
 
-export const CONTACT = {
-  title: "Contact | Minnesota Preparatory Academy",
-  heading: "Contact Us",
-  reach: "Reach Out to Us",
-  details: `${SITE.name} ${SITE.address}`,
-  line: `${SITE.emails.contact} | ${SITE.phone}`,
-  success: "Thank You for Contacting Us!",
-  supportCta: "Support MPA Today!",
-  contribute: "Contribute",
-  fields: [
-    { name: "firstName", label: "First Name", required: true },
-    { name: "lastName", label: "Last Name", required: true },
-    { name: "email", label: "Email Address", required: true, type: "email" },
-    { name: "yourMessage", label: "Your Message", required: false },
-    {
-      name: "message",
-      label: "Type Your Message Here",
-      required: false,
-      multiline: true,
-    },
-  ],
-} as const;
+export const whyChooseVeritasAlt = [
+  {
+    title: "Small Class Sizes",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/05/SmallClass2021-300x191.png",
+    imageTitle: "SmallClass2021",
+    href: "https://veritasclassical.org/class-size/",
+    body: "Your child will get the attention they need to succeed and will be given opportunities that wouldn’t be available to them in a larger class setting.",
+  },
+  {
+    title: "Christian Values",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/05/praying_600383-300x192.jpg",
+    imageTitle: "Group of people praying with Holy Bible at home, closeup",
+    href: "https://veritasclassical.org/christianformation/",
+    body: "Your child will be taught Biblical values that are instrumental in leading all of us towards goodness, love and hope in a world that oftentimes seems hopeless.",
+  },
+  {
+    title: "Academic Acceleration",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/05/Science13_600383-300x192.jpg",
+    imageTitle: "Science13_600383",
+    href: "https://veritasclassical.org/academic-acceleration/",
+    body: "Your child will not be held back or pushed too far forward. We ensure each student is appropriately placed based on ability, giftedness and motivation.",
+  },
+  {
+    title: "Caring Teachers",
+    image: "https://veritasclassical.org/wp-content/uploads/2024/05/Greek-Class_740472-300x191.jpg",
+    imageTitle: "Greek Class_740472",
+    href: "https://veritasclassical.org/caring-teachers",
+    body: "Your child will be loved and cared for by highly trained staff committed to nurturing every student in a safe and supportive learning environment.",
+  },
+];
 
-export const INQUIRY = {
-  title: "Application Inquiry | Minnesota Preparatory Academy",
-  heading: "Application Inquiry",
-  intro:
-    "Great to hear that you are interested in joining Minnesota Prep Academy! Please fill out our contact form and our team will reach out to you shortly with the application. Thank you for considering us as your educational institution!",
-  success: "Thanks for submitting!",
-  fields: [
-    { name: "firstName", label: "First Name", required: false },
-    { name: "lastName", label: "Last Name", required: false },
-    { name: "email", label: "Email", required: true, type: "email" },
-    { name: "message", label: "Message", required: false, multiline: true },
-  ],
-} as const;
+export const pillars = [
+  {
+    title: "Think",
+    subtitle: "Clear Thinking",
+    body: "Students learn to reason carefully, write clearly, and communicate with confidence through a classical course of study.",
+    icon: "psychology" as const,
+  },
+  {
+    title: "Discipline",
+    subtitle: "Athletics",
+    body: "Athletics develop discipline, teamwork, and perseverance as part of a balanced and ordered student life.",
+    icon: "directions_run" as const,
+  },
+  {
+    title: "Create",
+    subtitle: "The Arts",
+    body: "Students engage in the arts to develop skill, attention, and an appreciation for beauty in both creation and performance.",
+    icon: "palette" as const,
+  },
+  {
+    title: "Grow",
+    subtitle: "Christian Formation",
+    body: "Students grow in understanding and maturity through daily practice of faith, responsibility, and virtue.",
+    icon: "menu_book" as const,
+  },
+];
 
-export const FILE_SHARE = {
-  title: "File Share | Minnesota Preparatory Academy",
-  heading: "File Share",
-  empty: "Sign in to view shared files.",
-} as const;
+export const attractions = [
+  {
+    title: "Snowboarding",
+    place: "Wild Mountain",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/snowboarding-400x626-1.jpg",
+    imageTitle: "snowboarding-400×626",
+  },
+  {
+    title: "Rock Climbing",
+    place: "Interstate State Park",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/rock-climbing-400x628-1.jpg",
+    imageTitle: "rock-climbing-400×628",
+  },
+  {
+    title: "Water Activities",
+    place: "Local Lakes",
+    altPlace: ". . . on 1 of 10,000 Lakes",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/wakesurfing-400x626-1.jpg",
+    imageTitle: "wakesurfing-400×626",
+  },
+  {
+    title: "Shopping and Recreation",
+    place: "Mall of America",
+    altTitle: "Shop or Play",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/MOA-fun-400x627-1.jpg",
+    imageTitle: "MOA-fun-400×627",
+  },
+];
 
-export const TERMS = {
-  title: "Terms of Use | Minnesota Preparatory Academy",
-  heading: "School Policies",
-  body: "Minnesota Preparatory Academy is committed to providing a safe and inclusive learning environment for all students. Our school policies are designed to ensure that every student feels valued and respected, and that their rights are protected. We encourage all members of our school community to familiarize themselves with our policies and uphold the values of our institution.",
-  supportTitle: "Support Our Mission",
-  supportCta: "Get Involved",
-  supportHref: "/support-us",
-} as const;
+export const experienceCards = [
+  {
+    title: "Learn Proficient English",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/Language2.png",
+    imageTitle: "Language Learning",
+    body: "During your education at Veritas, you will be able to achieve proficiency as you practice with native speakers in the classroom and throughout your stay.",
+  },
+  {
+    title: "Experience American Culture",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/Cultural.png",
+    imageTitle: "Cultural Experience",
+    body: "Whether it is the July 4th parade and barbecue, or a field trip to America’s landmarks, you will be immersed in American culture throughout your education and your social life.",
+  },
+  {
+    title: "Build Lasting Relationships",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/Relationships2-1.png",
+    imageTitle: "Relationships",
+    body: "In additional to friendships built in the classroom and the dorms, students are paired with a family where they spend holidays, and enjoy the benefits of having a home away from home.",
+  },
+  {
+    title: "Prepare for American Colleges",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/07/UCLA.png",
+    imageTitle: "UCLA",
+    body: "High school students receive individualized college counseling and have opportunities to visit colleges, meet with college admissions counselors and professors in their desired majors.",
+  },
+];
 
-export const PRIVACY = {
-  title: "Privacy Policy | Minnesota Preparatory Academy",
-  heading: "Privacy Policy",
-  intro:
-    "I’m a privacy policy section. I’m a great place to inform your visitors about how you use, store, and protect their personal information. Add details such as what information you collect, whether it be email addresses, names or phone numbers, why you collect this information, and how you use it.",
-  body: "Your user’s privacy is of the highest importance to your organization, so take the time to write an accurate and detailed policy. Use straightforward language to gain their trust and make sure they keep coming back to your site!",
-  securityTitle: "Safety and Security",
-  securityIntro:
-    "I’m a safety and security section. As part of a privacy policy, in this section you can inform your visitors about how safely you protect their personal information. Add details such as encryption methods you may use, firewalls employed on your servers, or other security measures you my employ.",
-  securityBody:
-    "Your user’s security is of the highest importance to your organization, so take the time to write an accurate and detailed policy. Use straightforward language to gain their trust and make sure they keep coming back to your site!",
-  supportCta: "We Need Your Support Today!",
-  supportHref: "/support-us",
-} as const;
+export const faculty = [
+  {
+    name: "John Baumgartner",
+    image: "https://veritasclassical.org/wp-content/uploads/2021/12/BaumgartnerJ.png",
+    imageTitle: "Baumgartner John",
+    bio: "Mr. Baumgartner is a Twin Cities-based trombonist, bassist, composer, and music educator. As a performer he has toured across the US and Canada, recorded on various projects.",
+  },
+  {
+    name: "Karen Baumgartner",
+    image: "https://veritasclassical.org/wp-content/uploads/2021/12/BaumgartnerK.png",
+    imageTitle: "Baumgartner K",
+    bio: "Ms. Karen Baumgartner is an award winning-flutist who has given solo performances across the country. She also teachers at the University of Northwestern in Saint as an adjunct flute instructor.",
+  },
+  {
+    name: "Weily Grina-Shay",
+    image: "https://veritasclassical.org/wp-content/uploads/2021/12/WeilyShay-1.png",
+    imageTitle: "Weily Shay",
+    bio: "Ms. Grina-Shay is a clarinetist who is passionate about chamber music, education. She is the co-founder of 10th Wave Chamber Music Collective, a chamber music organization that seeks to curate innovative concert.",
+  },
+  {
+    name: "Rebecca Plunkett",
+    image: "https://veritasclassical.org/wp-content/uploads/2021/12/RebeccaPlunkett.png",
+    imageTitle: "Rebecca Plunkett",
+    bio: "Ms. Plunkett is a highly motivated, fun, energetic, and organized violinist who loves to teach! She has a certification in Beginner Violin Technique with Dr. Stephanie Allen of Violin Technique Coaching.",
+  },
+  {
+    name: "Ben Valine",
+    image: "https://veritasclassical.org/wp-content/uploads/2021/12/ValineB.png",
+    imageTitle: "Valine B",
+    bio: "Mr. Valine is a multi-instrumentalist whose talents include violin, viola, guitar, banjo, and mandolin. He has performed with Vince Gill and Ricky Skaggs, and has opened for John Legend, Sting, and The Jacksons.",
+  },
+  {
+    name: "Kiana Welsch",
+    image: "https://veritasclassical.org/wp-content/uploads/2022/01/KianaWelsch-300x191.png",
+    imageTitle: "Kiana Welsch",
+    bio: "Ms. Welsch has been playing the violin since she was six years old. She was a dedicated member of the Minnesota Youth Symphonies for five years, which played a significant role in her career choice.",
+  },
+  {
+    name: "Cathy Ellis",
+    image: "https://veritasclassical.org/wp-content/uploads/2023/07/CathyEllis.png",
+    imageTitle: "Cathy Ellis",
+    bio: "Ms. Ellis has taught music since 1987 and has performed in orchestras since 7th grade. She studied the Suzuki Violin Method at San Diego State University under Dr. Theodore Brunson.",
+  },
+  {
+    name: "Timothy Shows",
+    image: "https://veritasclassical.org/wp-content/uploads/2023/07/Timothy-Shows-2.png",
+    imageTitle: "Timothy Shows 2",
+    bio: "Mr. Shows is a Colombian American Principal Oboist of the Mankato Symphony. His studies in Manhattan with Maestro Lucarelli have refined his senses of tone color and air production.",
+  },
+];
+
+export const tuitionMatrix: Record<string, Record<string, string>> = {
+  "K-5th": {
+    "$49,000 or below": "For $49,000 and below, please contact the admissions office for guided tuition options. 651.462.3894.",
+    "$50,000-$69,000": "$4,800-$6,667",
+    "$70,000-$89,000": "$6,668-$7,835",
+    "$90,000 and above": "$7,836-$9,999",
+  },
+  "6th-8th": {
+    "$49,000 or below": "For $49,000 and below, please contact the admissions office for guided tuition options. 651.462.3894.",
+    "$50,000-$69,000": "$6,500-$8,667",
+    "$70,000-$89,000": "$8,668-$9,835",
+    "$90,000 and above": "$9,836-$11,999",
+  },
+  "9th-12th": {
+    "$49,000 or below": "For $49,000 and below, please contact the admissions office for guided tuition options. 651.462.3894.",
+    "$50,000-$69,000": "$7,500-$8,667",
+    "$70,000-$89,000": "$8,668-$9,835",
+    "$90,000 and above": "$9,836-$13,999",
+  },
+};
+
+export const grades = [
+  "PreK",
+  "Kindergarten",
+  "1st Grade",
+  "2nd Grade",
+  "3rd Grade",
+  "4th Grade",
+  "5th Grade",
+  "6th Grade",
+  "7th Grade",
+  "8th Grade",
+  "9th Grade",
+  "10th Grade",
+  "11th Grade",
+  "12th Grade",
+];
+
+export const countries = [
+  "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo (DRC)","Congo (Republic)","Costa Rica","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe",
+];
+
+export const countryCodes = [
+  { flag: "🇺🇸", code: "+1", label: "United States" },
+  { flag: "🇬🇧", code: "+44", label: "United Kingdom" },
+  { flag: "🇦🇺", code: "+61", label: "Australia" },
+  { flag: "🇦🇫", code: "+93", label: "Afghanistan" },
+  { flag: "🇦🇱", code: "+355", label: "Albania" },
+  { flag: "🇩🇿", code: "+213", label: "Algeria" },
+  { flag: "🇦🇷", code: "+54", label: "Argentina" },
+  { flag: "🇦🇲", code: "+374", label: "Armenia" },
+  { flag: "🇦🇹", code: "+43", label: "Austria" },
+  { flag: "🇦🇿", code: "+994", label: "Azerbaijan" },
+  { flag: "🇧🇭", code: "+973", label: "Bahrain" },
+  { flag: "🇧🇩", code: "+880", label: "Bangladesh" },
+  { flag: "🇧🇪", code: "+32", label: "Belgium" },
+  { flag: "🇧🇷", code: "+55", label: "Brazil" },
+  { flag: "🇨🇦", code: "+1", label: "Canada" },
+  { flag: "🇨🇱", code: "+56", label: "Chile" },
+  { flag: "🇨🇳", code: "+86", label: "China" },
+  { flag: "🇨🇴", code: "+57", label: "Colombia" },
+  { flag: "🇪🇬", code: "+20", label: "Egypt" },
+  { flag: "🇪🇹", code: "+251", label: "Ethiopia" },
+  { flag: "🇫🇷", code: "+33", label: "France" },
+  { flag: "🇩🇪", code: "+49", label: "Germany" },
+  { flag: "🇬🇭", code: "+233", label: "Ghana" },
+  { flag: "🇬🇷", code: "+30", label: "Greece" },
+  { flag: "🇮🇳", code: "+91", label: "India" },
+  { flag: "🇮🇩", code: "+62", label: "Indonesia" },
+  { flag: "🇮🇷", code: "+98", label: "Iran" },
+  { flag: "🇮🇶", code: "+964", label: "Iraq" },
+  { flag: "🇮🇪", code: "+353", label: "Ireland" },
+  { flag: "🇮🇱", code: "+972", label: "Israel" },
+  { flag: "🇮🇹", code: "+39", label: "Italy" },
+  { flag: "🇯🇵", code: "+81", label: "Japan" },
+  { flag: "🇯🇴", code: "+962", label: "Jordan" },
+  { flag: "🇰🇿", code: "+7", label: "Kazakhstan" },
+  { flag: "🇰🇪", code: "+254", label: "Kenya" },
+  { flag: "🇰🇷", code: "+82", label: "South Korea" },
+  { flag: "🇰🇼", code: "+965", label: "Kuwait" },
+  { flag: "🇱🇧", code: "+961", label: "Lebanon" },
+  { flag: "🇲🇾", code: "+60", label: "Malaysia" },
+  { flag: "🇲🇽", code: "+52", label: "Mexico" },
+  { flag: "🇲🇦", code: "+212", label: "Morocco" },
+  { flag: "🇳🇱", code: "+31", label: "Netherlands" },
+  { flag: "🇳🇿", code: "+64", label: "New Zealand" },
+  { flag: "🇳🇬", code: "+234", label: "Nigeria" },
+  { flag: "🇳🇴", code: "+47", label: "Norway" },
+  { flag: "🇵🇰", code: "+92", label: "Pakistan" },
+  { flag: "🇵🇦", code: "+507", label: "Panama" },
+  { flag: "🇵🇪", code: "+51", label: "Peru" },
+  { flag: "🇵🇭", code: "+63", label: "Philippines" },
+  { flag: "🇵🇱", code: "+48", label: "Poland" },
+  { flag: "🇵🇹", code: "+351", label: "Portugal" },
+  { flag: "🇶🇦", code: "+974", label: "Qatar" },
+  { flag: "🇷🇺", code: "+7", label: "Russia" },
+  { flag: "🇸🇦", code: "+966", label: "Saudi Arabia" },
+  { flag: "🇸🇬", code: "+65", label: "Singapore" },
+  { flag: "🇿🇦", code: "+27", label: "South Africa" },
+  { flag: "🇪🇸", code: "+34", label: "Spain" },
+  { flag: "🇱🇰", code: "+94", label: "Sri Lanka" },
+  { flag: "🇸🇪", code: "+46", label: "Sweden" },
+  { flag: "🇨🇭", code: "+41", label: "Switzerland" },
+  { flag: "🇹🇼", code: "+886", label: "Taiwan" },
+  { flag: "🇹🇭", code: "+66", label: "Thailand" },
+  { flag: "🇹🇳", code: "+216", label: "Tunisia" },
+  { flag: "🇹🇷", code: "+90", label: "Turkey" },
+  { flag: "🇺🇦", code: "+380", label: "Ukraine" },
+  { flag: "🇦🇪", code: "+971", label: "United Arab Emirates" },
+  { flag: "🇻🇳", code: "+84", label: "Vietnam" },
+  { flag: "🇾🇪", code: "+967", label: "Yemen" },
+  { flag: "🇿🇼", code: "+263", label: "Zimbabwe" },
+];

@@ -1,40 +1,31 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Poppins, Libre_Baskerville } from "next/font/google";
+import { AppCacheProvider } from "@mui/material-nextjs/v15-pagesRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import theme, { lato } from "@/theme/theme";
 import Layout from "@/components/layout/Layout";
-import theme from "@/theme/theme";
+import { site } from "@/data/site";
 import "@/styles/globals.css";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-export default function App({ Component, pageProps }: AppProps) {
+export default function App(props: AppProps) {
+  const { Component, pageProps } = props;
   return (
-    <>
+    <AppCacheProvider {...props}>
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{site.name}</title>
+        <link rel="icon" href={site.favicon} />
+        <link rel="apple-touch-icon" href={site.appleIcon} />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className={`${poppins.variable} ${baskerville.variable}`}>
+        <div className={lato.className}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </div>
       </ThemeProvider>
-    </>
+    </AppCacheProvider>
   );
 }

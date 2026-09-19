@@ -1,158 +1,128 @@
-import { HOME, SITE } from "@/data/site";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import Head from "next/head";
-import Link from "next/link";
+import PageFade from "@/components/layout/PageFade";
+import WhatSetsApart from "@/components/sections/WhatSetsApart";
+import Testimonials from "@/components/sections/Testimonials";
+import Pillars from "@/components/sections/Pillars";
+import IframeEmbed from "@/components/common/IframeEmbed";
+import { site } from "@/data/site";
+import { useInquiry } from "@/components/common/InquiryDialog";
+import { colors } from "@/theme/theme";
 
 export default function HomePage() {
+  const { openInquiry } = useInquiry();
+
   return (
-    <>
+    <PageFade>
       <Head>
-        <title>{HOME.title}</title>
-        <meta name="description" content={SITE.description} />
+        <title>Veritas Academy Classical Education - Veritas Academy Chisago City MN</title>
+        <meta
+          name="description"
+          content="Veritas Academy is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education."
+        />
       </Head>
 
       <Box
-        component="section"
         sx={{
           position: "relative",
-          overflow: "hidden",
-          minHeight: { xs: 560, md: 680 },
+          minHeight: { xs: 420, md: 560 },
           display: "flex",
-          alignItems: "center",
-          color: "common.white",
-          background: "linear-gradient(135deg, #0A142E 0%, #101F46 45%, #213E8C 100%)",
+          alignItems: "flex-end",
+          color: "white",
+          overflow: "hidden",
         }}
       >
         <Box
+          component="video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           sx={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url(${SITE.images.contact})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            opacity: 0.22,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: { xs: "block", md: "none" },
           }}
-        />
+        >
+          <source src={site.homepageVideoMobile} type="video/mp4" />
+        </Box>
         <Box
+          component="video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
           sx={{
             position: "absolute",
             inset: 0,
-            background:
-              "linear-gradient(90deg, rgba(10,20,46,0.92) 0%, rgba(16,31,70,0.82) 55%, rgba(33,62,140,0.55) 100%)",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: { xs: "none", md: "block" },
           }}
-        />
-        <Container maxWidth="lg" sx={{ position: "relative", py: { xs: 10, md: 14 } }}>
-          <Typography
-            variant="overline"
-            sx={{ color: "secondary.main", letterSpacing: 3, fontWeight: 700 }}
+        >
+          <source src={site.homepageVideoDesktop} type="video/mp4" />
+        </Box>
+        <Box sx={{ position: "absolute", inset: 0, bgcolor: "rgba(10,19,35,0.28)" }} />
+        <Container maxWidth="lg" sx={{ position: "relative", pb: 6 }}>
+          <Box
+            sx={{
+              ml: { md: "auto" },
+              maxWidth: { xs: "100%", md: 640 },
+              bgcolor: "rgba(58,58,58,0.7)",
+              p: { xs: 2.5, md: 4 },
+              textAlign: "center",
+            }}
           >
-            {HOME.empowerment}
-          </Typography>
-          <Typography variant="h1" sx={{ fontSize: { xs: 36, sm: 52, md: 72 }, maxWidth: 900 }}>
-            {HOME.welcome}
-          </Typography>
-          <Typography variant="h5" sx={{ mt: 3, maxWidth: 720, fontWeight: 400, opacity: 0.92 }}>
-            {HOME.vision}
-          </Typography>
-          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mt: 4 }}>
-            <Button
-              component={Link}
-              href="/application-inquiry"
-              variant="contained"
-              color="secondary"
-              size="large"
-              endIcon={<ArrowForwardIcon />}
-            >
-              Apply Now
-            </Button>
-            <Button
-              component={Link}
-              href="/admissions"
-              variant="outlined"
-              size="large"
-              sx={{ color: "common.white", borderColor: "rgba(255,255,255,0.5)" }}
-            >
-              Admissions & Enrollment
-            </Button>
-          </Stack>
+            <Typography variant="h1" sx={{ color: "white", mb: 1.5, fontSize: { xs: "1.7rem", md: "2.4rem" } }}>
+              <strong>Classical Education at Veritas Academy</strong>
+            </Typography>
+            <Typography variant="h2" sx={{ color: "white", fontStyle: "italic", fontSize: { xs: "1.15rem", md: "1.5rem" } }}>
+              Grounded in Truth. Guided by Wisdom. Marked by Virtue.
+            </Typography>
+          </Box>
         </Container>
       </Box>
 
-      <Container maxWidth="lg" sx={{ py: { xs: 7, md: 10 } }}>
-        <Grid container spacing={3}>
-          {HOME.cards.map((card) => (
-            <Grid key={card.title} size={{ xs: 12, md: 4 }}>
-              <Card sx={{ height: "100%" }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Typography variant="h5" sx={{ mb: 1.5 }}>
-                    {card.title}
-                  </Typography>
-                  <Typography color="text.secondary" sx={{ mb: 3, minHeight: 72 }}>
-                    {card.description}
-                  </Typography>
-                  <Button
-                    component={Link}
-                    href={card.href}
-                    endIcon={<ArrowForwardIcon />}
-                  >
-                    {card.title}
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      <Box sx={{ backgroundColor: "background.paper", py: { xs: 7, md: 10 } }}>
+      <Box sx={{ bgcolor: colors.burgundy, color: "white", py: 3 }}>
         <Container maxWidth="lg">
-          <Grid container spacing={6} sx={{ alignItems: "center" }}>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Typography variant="overline" color="primary" sx={{ letterSpacing: 2 }}>
-                {HOME.empowerSuccess}
+          <Grid container spacing={2} sx={{ alignItems: "center" }}>
+            <Grid size={{ xs: 12, md: 9 }}>
+              <Typography variant="h2" sx={{ color: "white", fontSize: { xs: "1.2rem", md: "1.45rem" } }}>
+                A classical Christian, K-12 school that grounds students in Biblical truth, providing academic and spiritual foundations for college bound students.
               </Typography>
-              <Typography variant="h3" sx={{ mt: 1, mb: 3 }}>
-                {HOME.join}
-              </Typography>
-              <Typography variant="body1" sx={{ fontSize: 18, lineHeight: 1.8 }}>
-                {HOME.intro}
-              </Typography>
-              <Button
-                component={Link}
-                href="/support-us"
-                variant="contained"
-                size="large"
-                sx={{ mt: 4 }}
-              >
-                Support Us
-              </Button>
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Box
-                sx={{
-                  borderRadius: 4,
-                  minHeight: { xs: 280, md: 380 },
-                  backgroundImage: `url(${SITE.images.support})`,
-                  backgroundSize: "400px 200px",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  backgroundColor: "black",
-                }}
-              />
+            <Grid size={{ xs: 12, md: 3 }} sx={{ textAlign: { xs: "left", md: "center" } }}>
+              <Button variant="contained" color="secondary" onClick={openInquiry}>
+                Start the Conversation
+              </Button>
             </Grid>
           </Grid>
         </Container>
       </Box>
-    </>
+
+      <WhatSetsApart />
+
+      <Box sx={{ py: 4, textAlign: "center" }}>
+        <Container maxWidth="md">
+          <Typography variant="body1" sx={{ mb: 2 }}>
+            Hear from a Veritas parent about why their family chose a classical Christian education.
+          </Typography>
+          <IframeEmbed src="https://player.vimeo.com/video/725494617?autoplay=0&autopause=0" title="Vimeo video player 1" height={360} />
+        </Container>
+      </Box>
+
+      <Pillars />
+      <Testimonials />
+    </PageFade>
   );
 }

@@ -1,13 +1,11 @@
-import { Fade } from "@mui/material";
-import { useRouter } from "next/router";
+import Fade from "@mui/material/Fade";
+import Box from "@mui/material/Box";
 import { ReactNode } from "react";
 
 export default function PageFade({ children }: { children: ReactNode }) {
-  const router = useRouter();
-
   return (
-    <Fade in key={router.asPath} timeout={450}>
-      <div>{children}</div>
+    <Fade in timeout={500}>
+      <Box>{children}</Box>
     </Fade>
   );
 }

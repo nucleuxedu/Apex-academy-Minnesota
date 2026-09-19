@@ -1,111 +1,111 @@
-import NewsletterForm from "@/components/forms/NewsletterForm";
-import { QUICK_LINKS, SITE } from "@/data/site";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  IconButton,
-  Link as MuiLink,
-  Stack,
-  Typography,
-} from "@mui/material";
-import NextLink from "next/link";
-
-const socialIcons = {
-  Facebook: FacebookIcon,
-  Twitter: TwitterIcon,
-  YouTube: YouTubeIcon,
-  Instagram: InstagramIcon,
-};
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/Phone";
+import HomeIcon from "@mui/icons-material/Home";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { site } from "@/data/site";
+import SiteLink from "@/components/common/SiteLink";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <Box
-      component="footer"
-      sx={{
-        mt: "auto",
-        background:
-          "linear-gradient(180deg, #0A142E 0%, #101F46 60%, #0A142E 100%)",
-        color: "common.white",
-        pt: { xs: 6, md: 8 },
-        pb: 3,
-      }}
-    >
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Typography variant="h6">{SITE.name}</Typography>
-            <Typography sx={{ mt: 1.5, opacity: 0.86 }}>
-              {SITE.address}
-            </Typography>
-            <Typography sx={{ mt: 1, opacity: 0.86 }}>
-              Phone:{" "}
-              <MuiLink href={SITE.phoneHref} color="secondary">
-                {SITE.phone}
-              </MuiLink>
-            </Typography>
-            <Stack direction="row" spacing={0.5} sx={{ mt: 2 }}>
-              {SITE.social.map((item) => {
-                const Icon = socialIcons[item.label];
-                return (
-                  <IconButton
-                    key={item.label}
-                    component="a"
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={item.label}
-                    sx={{ color: "common.white" }}
-                  >
-                    <Icon />
-                  </IconButton>
-                );
-              })}
-            </Stack>
+    <Box component="footer" sx={{ mt: "auto" }}>
+      <Box sx={{ bgcolor: "#faf9f8", py: { xs: 5, md: 7 }, borderTop: "1px solid", borderColor: "divider" }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
+                CONTACT US
+              </Typography>
+              <Stack spacing={1.5}>
+                {site.locations.map((loc) => (
+                  <Box key={loc.title} sx={{ display: "flex", gap: 1.25 }}>
+                    <HomeIcon color="primary" fontSize="small" sx={{ mt: 0.4 }} />
+                    <Typography variant="body2" color="text.primary">
+                      <strong>{loc.title}</strong>
+                      <br />
+                      {loc.lines[0]}
+                      <br />
+                      {loc.lines[1]}
+                    </Typography>
+                  </Box>
+                ))}
+                <Box sx={{ display: "flex", gap: 1.25, alignItems: "center" }}>
+                  <PhoneIcon color="primary" fontSize="small" />
+                  <SiteLink href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</SiteLink>
+                </Box>
+                <Box sx={{ display: "flex", gap: 1.25, alignItems: "center" }}>
+                  <EmailIcon color="primary" fontSize="small" />
+                  <SiteLink href={`mailto:${site.email}`}>{site.email}</SiteLink>
+                </Box>
+                <Box sx={{ display: "flex", gap: 1.25 }}>
+                  <AccessTimeIcon color="primary" fontSize="small" sx={{ mt: 0.3 }} />
+                  <Typography variant="body2">{site.hours}</Typography>
+                </Box>
+              </Stack>
+            </Grid>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
+                Download Android App
+              </Typography>
+              <SiteLink href={site.apps.android.href}>
+                <Box
+                  component="img"
+                  src={site.apps.android.image}
+                  alt={site.apps.android.alt}
+                  sx={{ width: "100%", maxWidth: 220, display: "block", mx: "auto" }}
+                />
+              </SiteLink>
+            </Grid>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
+                Download iOS App
+              </Typography>
+              <SiteLink href={site.apps.ios.href}>
+                <Box
+                  component="img"
+                  src={site.apps.ios.image}
+                  alt={site.apps.ios.alt}
+                  sx={{ width: "100%", maxWidth: 220, display: "block", mx: "auto" }}
+                />
+              </SiteLink>
+            </Grid>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
+                LET’S CONNECT
+              </Typography>
+              <Box>
+                <IconButton color="primary" href={site.social[0].href} aria-label="Facebook">
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton color="primary" href={site.social[1].href} aria-label="Instagram">
+                  <InstagramIcon />
+                </IconButton>
+                <IconButton color="primary" href={site.social[2].href} aria-label="Mail">
+                  <EmailIcon />
+                </IconButton>
+              </Box>
+            </Grid>
           </Grid>
-
-          <Grid size={{ xs: 12, md: 3 }}>
-            <Typography variant="h6" sx={{ mb: 1.5 }}>
-              Quick Links
-            </Typography>
-            <Stack spacing={1}>
-              {QUICK_LINKS.map((link) => (
-                <MuiLink
-                  key={link.label}
-                  component={NextLink}
-                  href={link.href}
-                  color="inherit"
-                  sx={{ opacity: 0.88, width: "fit-content" }}
-                >
-                  {link.label}
-                </MuiLink>
-              ))}
-            </Stack>
-          </Grid>
-
-          <Grid size={{ xs: 12, md: 5 }}>
-            <NewsletterForm dark />
-          </Grid>
-        </Grid>
-
-        <Divider sx={{ my: 4, borderColor: "rgba(255,255,255,0.16)" }} />
-
-        <Typography variant="body2" sx={{ opacity: 0.78 }}>
-          © 2024. All Rights Reserved Minnesota Preparatory Academy |{" "}
-          <MuiLink component={NextLink} href={SITE.termsUrl} color="inherit">
-            Terms of Use
-          </MuiLink>{" "}
-          |{" "}
-          <MuiLink component={NextLink} href={SITE.privacyUrl} color="inherit">
-            Privacy Policy
-          </MuiLink>
-        </Typography>
-      </Container>
+        </Container>
+      </Box>
+      <Box sx={{ bgcolor: "primary.main", color: "white", py: 2, textAlign: "center" }}>
+        <Container maxWidth="lg">
+          <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.92)" }}>
+            © {year} · {site.copyright} |{" "}
+            <SiteLink href="/privacy-policy" sx={{ color: "white" }}>
+              Privacy Policy
+            </SiteLink>
+          </Typography>
+        </Container>
+      </Box>
     </Box>
   );
 }
