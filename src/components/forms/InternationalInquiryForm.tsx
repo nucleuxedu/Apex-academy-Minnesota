@@ -35,7 +35,27 @@ export default function InternationalInquiryForm() {
   };
 
   return (
-    <Box component="form" onSubmit={onSubmit} sx={{ my: 3, p: 3, bgcolor: "#f6f6f6", borderRadius: 2 }}>
+    <Box
+      component="form"
+      onSubmit={onSubmit}
+      sx={{
+        my: 3,
+        p: { xs: 2.5, md: 3.5 },
+        bgcolor: "background.default",
+        border: "1px solid",
+        borderColor: "divider",
+        position: "relative",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 3,
+          bgcolor: "secondary.main",
+        },
+      }}
+    >
       <Typography variant="h2" sx={{ mb: 1 }}>
         Request Information (International)
       </Typography>

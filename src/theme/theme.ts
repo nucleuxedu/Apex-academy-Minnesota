@@ -1,110 +1,149 @@
 import { createTheme } from "@mui/material/styles";
-import { Lato, Libre_Baskerville } from "next/font/google";
+import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 
-export const lato = Lato({
-  weight: ["400", "700"],
+export const sourceSans = Source_Sans_3({
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
 
-export const libreBaskerville = Libre_Baskerville({
-  weight: ["400", "700"],
+export const cormorant = Cormorant_Garamond({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
   style: ["normal", "italic"],
 });
 
-const burgundy = "#86191b";
-const gold = "#e58926";
-const ink = "#333333";
-const muted = "#747474";
-const cream = "#f2f1f0";
-const navy = "#333c4e";
+const oxblood = "#6b1c22";
+const gold = "#c4a265";
+const ink = "#171411";
+const muted = "#6b6258";
+const parchment = "#f3ece1";
+const paper = "#fcfaf5";
+const bone = "#e4d8c4";
+const navy = "#2a2420";
 
 const theme = createTheme({
   palette: {
-    primary: { main: burgundy, contrastText: "#ffffff" },
-    secondary: { main: gold, contrastText: "#ffffff" },
-    background: { default: "#ffffff", paper: "#ffffff" },
+    primary: { main: oxblood, contrastText: "#fbf6ee" },
+    secondary: { main: gold, contrastText: "#171411" },
+    background: { default: parchment, paper },
     text: { primary: ink, secondary: muted },
-    divider: "#e0dede",
+    divider: bone,
   },
   typography: {
-    fontFamily: lato.style.fontFamily,
+    fontFamily: sourceSans.style.fontFamily,
     h1: {
-      fontFamily: libreBaskerville.style.fontFamily,
-      fontWeight: 400,
-      fontSize: "2.125rem",
-      lineHeight: 1.2,
-      color: burgundy,
+      fontFamily: cormorant.style.fontFamily,
+      fontWeight: 500,
+      fontSize: "clamp(2.2rem, 4vw, 3.4rem)",
+      lineHeight: 1.12,
+      letterSpacing: "-0.02em",
+      color: oxblood,
     },
     h2: {
-      fontFamily: libreBaskerville.style.fontFamily,
-      fontWeight: 400,
-      fontSize: "1.75rem",
-      lineHeight: 1.25,
-      color: burgundy,
+      fontFamily: cormorant.style.fontFamily,
+      fontWeight: 500,
+      fontSize: "clamp(1.7rem, 2.6vw, 2.35rem)",
+      lineHeight: 1.2,
+      color: oxblood,
     },
     h3: {
-      fontFamily: libreBaskerville.style.fontFamily,
-      fontWeight: 400,
-      fontSize: "1.4rem",
+      fontFamily: cormorant.style.fontFamily,
+      fontWeight: 600,
+      fontSize: "1.45rem",
       lineHeight: 1.3,
-      color: navy,
+      color: ink,
     },
     h4: {
-      fontFamily: libreBaskerville.style.fontFamily,
-      fontWeight: 400,
-      fontSize: "1.2rem",
+      fontFamily: cormorant.style.fontFamily,
+      fontWeight: 600,
+      fontSize: "1.28rem",
       lineHeight: 1.35,
-      color: burgundy,
+      color: oxblood,
     },
-    body1: { fontSize: "1rem", lineHeight: 1.7, color: ink },
+    overline: {
+      fontFamily: sourceSans.style.fontFamily,
+      fontWeight: 700,
+      fontSize: "0.72rem",
+      letterSpacing: "0.22em",
+      textTransform: "uppercase",
+      color: gold,
+    },
+    body1: { fontSize: "1.05rem", lineHeight: 1.8, color: ink },
     body2: { fontSize: "0.95rem", lineHeight: 1.7, color: muted },
-    button: { textTransform: "none", fontWeight: 700, letterSpacing: 0.2 },
+    button: {
+      fontFamily: sourceSans.style.fontFamily,
+      textTransform: "none",
+      fontWeight: 700,
+      letterSpacing: "0.04em",
+    },
   },
-  shape: { borderRadius: 8 },
+  shape: { borderRadius: 0 },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 7,
-          padding: "10px 22px",
-          transition: "background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease",
-          "&:hover": { transform: "translateY(-1px)" },
+          borderRadius: 0,
+          padding: "11px 22px",
+          transition: "background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease",
         },
-        contained: {
-          boxShadow: "none",
-          "&:hover": { boxShadow: "0 8px 18px rgba(134,25,27,0.25)" },
+        contained: { boxShadow: "none", "&:hover": { boxShadow: "none", backgroundColor: "#54151a" } },
+        outlined: {
+          borderColor: gold,
+          color: oxblood,
+          "&:hover": { borderColor: oxblood, backgroundColor: "rgba(196,162,101,0.12)" },
         },
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: "0 8px 24px rgba(51,60,78,0.08)",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          backgroundColor: paper,
+          border: `1px solid ${bone}`,
+          boxShadow: "none",
+          borderRadius: 0,
+          transition: "transform 0.35s ease, border-color 0.35s ease",
           "&:hover": {
-            transform: "translateY(-4px)",
-            boxShadow: "0 14px 32px rgba(51,60,78,0.14)",
+            transform: "translateY(-6px)",
+            borderColor: gold,
           },
         },
       },
     },
     MuiLink: {
       styleOverrides: {
-        root: { color: burgundy, fontWeight: 700 },
+        root: { color: oxblood, fontWeight: 700, textUnderlineOffset: 3 },
       },
+    },
+    MuiAppBar: {
+      styleOverrides: { root: { backgroundImage: "none" } },
     },
     MuiCssBaseline: {
       styleOverrides: {
-        body: { backgroundColor: cream },
-        a: { color: burgundy },
+        body: {
+          backgroundColor: parchment,
+          backgroundImage:
+            "radial-gradient(ellipse at top, rgba(196,162,101,0.12), transparent 55%), linear-gradient(180deg, #f7f1e8 0%, #f3ece1 100%)",
+        },
+        a: { color: oxblood },
         img: { maxWidth: "100%", height: "auto" },
+        blockquote: { margin: 0 },
       },
     },
   },
 });
 
 export default theme;
-export const colors = { burgundy, gold, ink, muted, cream, navy };
+export const colors = {
+  burgundy: oxblood,
+  oxblood,
+  gold,
+  ink,
+  muted,
+  cream: parchment,
+  parchment,
+  paper,
+  bone,
+  navy,
+};

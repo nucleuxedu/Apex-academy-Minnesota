@@ -1,26 +1,35 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
 import Section from "@/components/common/Section";
+import SectionHeading from "@/components/common/SectionHeading";
 import { testimonials } from "@/data/site";
+import { colors } from "@/theme/theme";
 
 export default function Testimonials() {
   return (
-    <Section>
-      <Typography variant="h2" align="center" sx={{ mb: 4 }}>
+    <Section bg={colors.ink} color="#f4efe6">
+      <SectionHeading kicker="Voices" light>
         What Everyone Is Saying About Veritas
-      </Typography>
+      </SectionHeading>
       <Grid container spacing={3}>
         {testimonials.map((quote) => (
           <Grid key={quote.slice(0, 24)} size={{ xs: 12, sm: 6, md: 3 }}>
-            <Card sx={{ height: "100%", borderLeft: "4px solid", borderColor: "primary.main" }}>
-              <CardContent>
-                <Typography variant="body1" component="blockquote" sx={{ m: 0, fontStyle: "italic" }}>
-                  {quote}
-                </Typography>
-              </CardContent>
-            </Card>
+            <Box
+              sx={{
+                height: "100%",
+                p: 3,
+                border: "1px solid rgba(196,162,101,0.35)",
+                bgcolor: "rgba(252,250,245,0.04)",
+              }}
+            >
+              <Typography sx={{ color: "secondary.main", fontSize: "2.4rem", lineHeight: 1, mb: 1, fontFamily: "Georgia, serif" }}>
+                “
+              </Typography>
+              <Typography variant="body1" component="blockquote" sx={{ m: 0, fontStyle: "italic", color: "#f4efe6" }}>
+                {quote}
+              </Typography>
+            </Box>
           </Grid>
         ))}
       </Grid>

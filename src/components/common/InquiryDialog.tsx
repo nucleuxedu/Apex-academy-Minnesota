@@ -36,7 +36,13 @@ export function InquiryProvider({ children }: { children: ReactNode }) {
   return (
     <InquiryContext.Provider value={value}>
       {children}
-      <Dialog open={open} onClose={() => setOpen(false)} maxWidth="md" fullWidth>
+      <Dialog
+        open={open}
+        onClose={() => setOpen(false)}
+        maxWidth="md"
+        fullWidth
+        slotProps={{ paper: { sx: { borderRadius: 0, borderTop: "3px solid", borderColor: "secondary.main" } } }}
+      >
         <DialogTitle sx={{ pr: 6 }}>
           Start the Conversation
           <IconButton

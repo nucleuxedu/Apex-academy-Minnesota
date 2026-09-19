@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { InquiryProvider } from "@/components/common/InquiryDialog";
+import { colors } from "@/theme/theme";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -16,11 +17,19 @@ export default function Layout({ children }: { children: ReactNode }) {
         </Box>
         <Footer />
         <Fab
-          color="primary"
           size="small"
           aria-label="Go to Top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          sx={{ position: "fixed", right: 16, bottom: 16, zIndex: 1100 }}
+          sx={{
+            position: "fixed",
+            right: 18,
+            bottom: 18,
+            zIndex: 1100,
+            bgcolor: colors.ink,
+            color: "secondary.main",
+            borderRadius: 0,
+            "&:hover": { bgcolor: "primary.main", color: "secondary.main" },
+          }}
         >
           <KeyboardArrowUpIcon />
         </Fab>

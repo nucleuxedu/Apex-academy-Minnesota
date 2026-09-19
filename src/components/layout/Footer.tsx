@@ -4,33 +4,85 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
-import HomeIcon from "@mui/icons-material/Home";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import NextLink from "next/link";
 import { site } from "@/data/site";
 import SiteLink from "@/components/common/SiteLink";
+import { colors } from "@/theme/theme";
+import { useInquiry } from "@/components/common/InquiryDialog";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const { openInquiry } = useInquiry();
+
   return (
     <Box component="footer" sx={{ mt: "auto" }}>
-      <Box sx={{ bgcolor: "#faf9f8", py: { xs: 5, md: 7 }, borderTop: "1px solid", borderColor: "divider" }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={4}>
+      <Box
+        sx={{
+          bgcolor: colors.ink,
+          color: "#f4efe6",
+          pt: { xs: 6, md: 8 },
+          pb: { xs: 5, md: 6 },
+          borderTop: "3px solid",
+          borderColor: "secondary.main",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Grid container spacing={{ xs: 4, md: 6 }}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Box
+                component={NextLink}
+                href="/"
+                sx={{
+                  display: "inline-flex",
+                  bgcolor: colors.paper,
+                  px: 1.5,
+                  py: 1,
+                  mb: 2.5,
+                }}
+              >
+                <Box
+                  component="img"
+                  src={site.logo.src}
+                  srcSet={`${site.logo.src} 1x, ${site.logo.retina} 2x`}
+                  alt={site.logo.alt}
+                  sx={{ height: 52, width: "auto" }}
+                />
+              </Box>
+              <Typography
+                variant="h3"
+                sx={{ color: "#fbf6ee", fontStyle: "italic", fontWeight: 400, mb: 2, fontSize: "1.35rem" }}
+              >
+                {site.tagline}
+              </Typography>
+              <Button variant="contained" color="secondary" onClick={openInquiry} href={`mailto:${site.email}`}>
+                Inquire
+              </Button>
+            </Grid>
+
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
+              <Typography variant="overline" sx={{ display: "block", mb: 2 }}>
                 CONTACT US
               </Typography>
-              <Stack spacing={1.5}>
+              <Stack spacing={2}>
                 {site.locations.map((loc) => (
-                  <Box key={loc.title} sx={{ display: "flex", gap: 1.25 }}>
-                    <HomeIcon color="primary" fontSize="small" sx={{ mt: 0.4 }} />
-                    <Typography variant="body2" color="text.primary">
-                      <strong>{loc.title}</strong>
-                      <br />
+                  <Box
+                    key={loc.title}
+                    sx={{
+                      pl: 1.5,
+                      borderLeft: "2px solid",
+                      borderColor: "secondary.main",
+                    }}
+                  >
+                    <Typography variant="body2" sx={{ color: "#fbf6ee", fontWeight: 700, mb: 0.25 }}>
+                      {loc.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "rgba(244,239,230,0.78)" }}>
                       {loc.lines[0]}
                       <br />
                       {loc.lines[1]}
@@ -38,69 +90,70 @@ export default function Footer() {
                   </Box>
                 ))}
                 <Box sx={{ display: "flex", gap: 1.25, alignItems: "center" }}>
-                  <PhoneIcon color="primary" fontSize="small" />
-                  <SiteLink href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</SiteLink>
+                  <PhoneIcon sx={{ color: "secondary.main", fontSize: 18 }} />
+                  <SiteLink href={`tel:${site.phoneTel}`} sx={{ color: "#f4efe6" }}>
+                    {site.phoneDisplay}
+                  </SiteLink>
                 </Box>
                 <Box sx={{ display: "flex", gap: 1.25, alignItems: "center" }}>
-                  <EmailIcon color="primary" fontSize="small" />
-                  <SiteLink href={`mailto:${site.email}`}>{site.email}</SiteLink>
+                  <EmailIcon sx={{ color: "secondary.main", fontSize: 18 }} />
+                  <SiteLink href={`mailto:${site.email}`} sx={{ color: "#f4efe6" }}>
+                    {site.email}
+                  </SiteLink>
                 </Box>
-                <Box sx={{ display: "flex", gap: 1.25 }}>
-                  <AccessTimeIcon color="primary" fontSize="small" sx={{ mt: 0.3 }} />
-                  <Typography variant="body2">{site.hours}</Typography>
+                <Box sx={{ display: "flex", gap: 1.25, alignItems: "flex-start" }}>
+                  <AccessTimeIcon sx={{ mt: 0.25, color: "secondary.main", fontSize: 18 }} />
+                  <Typography variant="body2" sx={{ color: "rgba(244,239,230,0.8)" }}>
+                    {site.hours}
+                  </Typography>
                 </Box>
               </Stack>
             </Grid>
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
-                Download Android App
-              </Typography>
-              <SiteLink href={site.apps.android.href}>
-                <Box
-                  component="img"
-                  src={site.apps.android.image}
-                  alt={site.apps.android.alt}
-                  sx={{ width: "100%", maxWidth: 220, display: "block", mx: "auto" }}
-                />
-              </SiteLink>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
-                Download iOS App
-              </Typography>
-              <SiteLink href={site.apps.ios.href}>
-                <Box
-                  component="img"
-                  src={site.apps.ios.image}
-                  alt={site.apps.ios.alt}
-                  sx={{ width: "100%", maxWidth: 220, display: "block", mx: "auto" }}
-                />
-              </SiteLink>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-              <Typography variant="h4" sx={{ mb: 2, fontSize: "1.05rem", letterSpacing: 0.6 }}>
+
+
+            <Grid size={{ xs: 12, md: 2 }}>
+              <Typography variant="overline" sx={{ display: "block", mb: 2 }}>
                 LET’S CONNECT
               </Typography>
-              <Box>
-                <IconButton color="primary" href={site.social[0].href} aria-label="Facebook">
-                  <FacebookIcon />
-                </IconButton>
-                <IconButton color="primary" href={site.social[1].href} aria-label="Instagram">
-                  <InstagramIcon />
-                </IconButton>
-                <IconButton color="primary" href={site.social[2].href} aria-label="Mail">
-                  <EmailIcon />
-                </IconButton>
-              </Box>
+              <Stack direction="row" sx={{ gap: 1, flexWrap: "wrap" }}>
+                {site.social.map((item) => (
+                  <IconButton
+                    key={item.label}
+                    href={item.href}
+                    aria-label={item.label}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    sx={{
+                      color: colors.ink,
+                      bgcolor: "secondary.main",
+                      borderRadius: 0,
+                      width: 42,
+                      height: 42,
+                      "&:hover": { bgcolor: "#d4b57a" },
+                    }}
+                  >
+                    {item.label === "Facebook" ? <FacebookIcon /> : item.label === "Instagram" ? <InstagramIcon /> : <EmailIcon />}
+                  </IconButton>
+                ))}
+              </Stack>
             </Grid>
           </Grid>
         </Container>
       </Box>
-      <Box sx={{ bgcolor: "primary.main", color: "white", py: 2, textAlign: "center" }}>
-        <Container maxWidth="lg">
-          <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.92)" }}>
+
+      <Box
+        sx={{
+          bgcolor: "#100e0c",
+          color: "rgba(244,239,230,0.78)",
+          py: 2.25,
+          borderTop: "1px solid",
+          borderColor: "rgba(196,162,101,0.28)",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Typography variant="body2" sx={{ color: "inherit", fontSize: "0.85rem", lineHeight: 1.7 }}>
             © {year} · {site.copyright} |{" "}
-            <SiteLink href="/privacy-policy" sx={{ color: "white" }}>
+            <SiteLink href="/privacy-policy" sx={{ color: "secondary.main" }}>
               Privacy Policy
             </SiteLink>
           </Typography>

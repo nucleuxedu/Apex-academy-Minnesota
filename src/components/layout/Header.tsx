@@ -21,11 +21,13 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { mainNav, site, type NavChild, type NavItem } from "@/data/site";
 import { isInternalHref, toAppHref } from "@/utils/links";
 import { useInquiry } from "@/components/common/InquiryDialog";
+import { colors } from "@/theme/theme";
 
 export default function Header() {
   const router = useRouter();
@@ -45,57 +47,86 @@ export default function Header() {
 
   return (
     <Box component="header" sx={{ position: "sticky", top: 0, zIndex: 1200 }}>
-      <Box sx={{ bgcolor: "primary.main", color: "white" }}>
-        <Container maxWidth="lg" sx={{ py: 0.75, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 2, flexWrap: "wrap" }}>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }}>
+      <Box sx={{ bgcolor: colors.ink, color: "#f4efe6", borderBottom: "1px solid", borderColor: "secondary.main" }}>
+        <Container
+          maxWidth="xl"
+          sx={{
+            py: 0.7,
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 2,
+            flexWrap: "wrap",
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 1, md: 2.5 }, flexWrap: "wrap" }}>
             <Button
               color="inherit"
               href={`tel:${site.phoneTel}`}
-              startIcon={<PhoneIcon />}
-              sx={{ minWidth: 0 }}
+              startIcon={<PhoneIcon sx={{ fontSize: 16 }} />}
+              sx={{ minWidth: 0, fontSize: "0.82rem", letterSpacing: "0.04em" }}
             >
               {site.phoneDisplay}
-              <Chip label="24hrs" size="small" sx={{ ml: 1, bgcolor: "secondary.main", color: "white", height: 20 }} />
+              <Chip
+                label="24hrs"
+                size="small"
+                sx={{ ml: 1, bgcolor: "secondary.main", color: colors.ink, height: 18, fontWeight: 700, fontSize: "0.65rem" }}
+              />
             </Button>
-            <Button color="inherit" startIcon={<EmailIcon />} onClick={openInquiry} href={`mailto:${site.email}`}>
+            <Typography variant="body2" sx={{ display: { xs: "none", md: "block" }, color: "rgba(244,239,230,0.72)", fontSize: "0.8rem" }}>
+              {site.hours}
+            </Typography>
+            <Button
+              color="inherit"
+              startIcon={<EmailIcon sx={{ fontSize: 16 }} />}
+              onClick={openInquiry}
+              href={`mailto:${site.email}`}
+              sx={{ fontSize: "0.82rem" }}
+            >
               Inquire
             </Button>
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
-            <IconButton color="inherit" href={site.social[0].href} target="_blank" rel="noreferrer" aria-label="Facebook">
-              <FacebookIcon />
+          <Box sx={{ display: "flex", alignItems: "center", gap: 0.25 }}>
+            <IconButton color="inherit" href={site.social[0].href} target="_blank" rel="noreferrer" aria-label="Facebook" size="small">
+              <FacebookIcon fontSize="small" />
             </IconButton>
-            <IconButton color="inherit" href={site.social[1].href} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <InstagramIcon />
+            <IconButton color="inherit" href={site.social[1].href} target="_blank" rel="noopener noreferrer" aria-label="Instagram" size="small">
+              <InstagramIcon fontSize="small" />
             </IconButton>
-            <IconButton color="inherit" href={site.social[2].href} aria-label="Email">
-              <EmailIcon />
+            <IconButton color="inherit" href={site.social[2].href} aria-label="Email" size="small">
+              <EmailIcon fontSize="small" />
             </IconButton>
           </Box>
         </Container>
       </Box>
 
-      <AppBar position="static" color="inherit" elevation={3} sx={{ bgcolor: "white" }}>
-        <Toolbar sx={{ flexDirection: "column", py: 1.5 }}>
-          <Box
-            component={NextLink}
-            href="/"
-            sx={{ display: "flex", justifyContent: "center", mb: { xs: 0, md: 1 } }}
-          >
+      <AppBar position="static" elevation={0} sx={{ bgcolor: colors.paper, color: colors.ink, borderBottom: "1px solid", borderColor: "divider" }}>
+        <Toolbar
+          sx={{
+            minHeight: { xs: 76, md: 92 },
+            px: { xs: 2, md: 3 },
+            gap: 2,
+            justifyContent: "space-between",
+          }}
+        >
+          <Box component={NextLink} href="/" sx={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
             <Box
               component="img"
               src={site.logo.src}
               srcSet={`${site.logo.src} 1x, ${site.logo.retina} 2x`}
               alt={site.logo.alt}
-              sx={{ height: { xs: 64, md: 88 }, width: "auto" }}
+              sx={{ height: { xs: 52, md: 68 }, width: "auto" }}
             />
           </Box>
-          <Box sx={{ width: "100%", display: "flex", justifyContent: { xs: "flex-end", md: "center" } }}>
-            <Box sx={{ display: { xs: "none", md: "flex" }, flexWrap: "wrap", justifyContent: "center", gap: 0.5 }}>
-              {mainNav.map((item) => (
+          <Box sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center", gap: 0.25, flexWrap: "wrap", justifyContent: "flex-end" }}>
+            {mainNav.map((item) => {
+              const active = router.pathname === item.href || (item.href !== "/" && router.pathname.startsWith(item.href));
+              const isDonate = item.label === "Donate";
+              return (
                 <Button
                   key={item.label}
                   color="inherit"
+                  endIcon={item.children ? <KeyboardArrowDownIcon sx={{ fontSize: 16 }} /> : undefined}
                   onClick={(e) => {
                     if (item.children) {
                       setActiveMenu(item);
@@ -105,18 +136,27 @@ export default function Header() {
                     }
                   }}
                   sx={{
-                    color: router.pathname === item.href ? "primary.main" : "text.primary",
-                    fontWeight: router.pathname === item.href ? 800 : 600,
+                    color: isDonate ? colors.ink : active ? "primary.main" : colors.ink,
+                    bgcolor: isDonate ? "secondary.main" : "transparent",
+                    fontWeight: active || isDonate ? 700 : 600,
+                    fontSize: "0.78rem",
+                    letterSpacing: "0.06em",
+                    px: 1.4,
+                    minWidth: 0,
+                    borderBottom: active && !isDonate ? "2px solid" : "2px solid transparent",
+                    borderColor: active && !isDonate ? "secondary.main" : "transparent",
+                    borderRadius: 0,
+                    "&:hover": { bgcolor: isDonate ? "#d4b57a" : "rgba(107,28,34,0.06)" },
                   }}
                 >
                   {item.label}
                 </Button>
-              ))}
-            </Box>
-            <IconButton sx={{ display: { xs: "inline-flex", md: "none" } }} onClick={() => setDrawerOpen(true)} aria-label="Open menu">
-              <MenuIcon />
-            </IconButton>
+              );
+            })}
           </Box>
+          <IconButton sx={{ display: { xs: "inline-flex", lg: "none" } }} onClick={() => setDrawerOpen(true)} aria-label="Open menu">
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
 
@@ -124,11 +164,13 @@ export default function Header() {
         anchorEl={menuAnchor}
         open={Boolean(menuAnchor)}
         onClose={() => setMenuAnchor(null)}
-        slotProps={{ paper: { sx: { minWidth: 240 } } }}
+        slotProps={{ paper: { sx: { minWidth: 260, borderRadius: 0, border: "1px solid", borderColor: "divider", mt: 1 } } }}
       >
         {activeMenu?.children?.map((child) => (
           <Box key={child.label}>
-            <MenuItem onClick={() => go(child.href)}>{child.label}</MenuItem>
+            <MenuItem onClick={() => go(child.href)} sx={{ fontFamily: "inherit" }}>
+              {child.label}
+            </MenuItem>
             {child.children?.map((grandchild) => (
               <MenuItem key={grandchild.label} sx={{ pl: 4 }} onClick={() => go(grandchild.href)}>
                 {grandchild.label}
@@ -138,9 +180,14 @@ export default function Header() {
         ))}
       </Menu>
 
-      <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <Box sx={{ width: 300, pt: 2 }} role="presentation">
-          <Typography variant="h4" sx={{ px: 2, mb: 1 }}>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        slotProps={{ paper: { sx: { width: 320, bgcolor: colors.ink, color: "#f4efe6" } } }}
+      >
+        <Box sx={{ pt: 3 }} role="presentation">
+          <Typography variant="overline" sx={{ px: 3, display: "block" }}>
             Menu
           </Typography>
           <List>

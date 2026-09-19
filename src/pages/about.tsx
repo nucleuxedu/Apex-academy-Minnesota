@@ -16,7 +16,17 @@ export default function AboutPage() {
       sidebar={
         <>
           <LinkCard title="About" links={aboutLinks} />
-          <Box sx={{ p: 2, bgcolor: "#f6f6f6", borderRadius: 2, mb: 3 }}>
+          <Box
+            sx={{
+              p: 3,
+              mb: 3,
+              bgcolor: "background.paper",
+              border: "1px solid",
+              borderColor: "divider",
+              borderLeft: "3px solid",
+              borderLeftColor: "secondary.main",
+            }}
+          >
             <Typography variant="body1" sx={{ mb: 1 }}>
               <strong>We exist:</strong>
             </Typography>

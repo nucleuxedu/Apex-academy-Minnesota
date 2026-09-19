@@ -11,15 +11,15 @@ type Props = {
   sx?: object;
 };
 
-export default function Section({ children, bg, color, id, maxWidth = "lg", sx }: Props) {
+export default function Section({ children, bg, color, id, maxWidth = "xl", sx }: Props) {
   return (
     <Box
       id={id}
       component="section"
       sx={{
-        py: { xs: 5, md: 7 },
+        py: { xs: 6, md: 9 },
         backgroundColor: bg || "transparent",
-        color: color,
+        color,
         ...sx,
       }}
     >

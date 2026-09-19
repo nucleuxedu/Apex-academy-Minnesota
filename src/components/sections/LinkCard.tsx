@@ -1,9 +1,9 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
 import SiteLink from "@/components/common/SiteLink";
+import { colors } from "@/theme/theme";
 
 type Props = {
   title: string;
@@ -12,19 +12,40 @@ type Props = {
 
 export default function LinkCard({ title, links }: Props) {
   return (
-    <Card sx={{ mb: 3 }}>
-      <CardContent>
-        <Typography variant="h2" sx={{ mb: 1, fontSize: "1.5rem" }}>
-          {title}
-        </Typography>
-        <List dense>
-          {links.map((link) => (
-            <ListItem key={link.label} sx={{ px: 0 }}>
-              <SiteLink href={link.href}>{link.label}</SiteLink>
-            </ListItem>
-          ))}
-        </List>
-      </CardContent>
-    </Card>
+    <Box
+      sx={{
+        mb: 3,
+        bgcolor: colors.paper,
+        border: "1px solid",
+        borderColor: "divider",
+        p: 3,
+        position: "relative",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          left: 0,
+          top: 0,
+          bottom: 0,
+          width: 3,
+          bgcolor: "secondary.main",
+        },
+      }}
+    >
+      <Typography variant="overline" sx={{ display: "block", mb: 1 }}>
+        Explore
+      </Typography>
+      <Typography variant="h3" sx={{ mb: 1.5, color: "primary.main" }}>
+        {title}
+      </Typography>
+      <List dense disablePadding>
+        {links.map((link) => (
+          <ListItem key={link.label} sx={{ px: 0, py: 0.7, borderBottom: "1px solid", borderColor: "divider" }}>
+            <SiteLink href={link.href} sx={{ fontWeight: 600 }}>
+              {link.label}
+            </SiteLink>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
   );
 }

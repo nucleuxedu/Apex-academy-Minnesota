@@ -3,7 +3,7 @@ import Head from "next/head";
 import { AppCacheProvider } from "@mui/material-nextjs/v15-pagesRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import theme, { lato } from "@/theme/theme";
+import theme, { sourceSans } from "@/theme/theme";
 import Layout from "@/components/layout/Layout";
 import { site } from "@/data/site";
 import "@/styles/globals.css";
@@ -20,7 +20,7 @@ export default function App(props: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className={lato.className}>
+        <div className={sourceSans.className}>
           <Layout>
             <Component {...pageProps} />
           </Layout>

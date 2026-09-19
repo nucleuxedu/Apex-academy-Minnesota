@@ -10,9 +10,17 @@ export default function FacultyGrid() {
     <Grid container spacing={3} sx={{ mt: 1 }}>
       {faculty.map((person) => (
         <Grid key={person.name} size={{ xs: 12, sm: 6, md: 3 }}>
-          <Card>
-            <ContentImage src={person.image} title={person.imageTitle} alt={person.name} sx={{ borderRadius: 0 }} />
+          <Card sx={{ height: "100%" }}>
+            <ContentImage
+              src={person.image}
+              title={person.imageTitle}
+              alt={person.name}
+              sx={{ borderRadius: 0, aspectRatio: "4/3", objectFit: "cover" }}
+            />
             <CardContent>
+              <Typography variant="overline" sx={{ display: "block", mb: 0.5 }}>
+                Faculty
+              </Typography>
               <Typography variant="h4" sx={{ mb: 1 }}>
                 {person.name}
               </Typography>
