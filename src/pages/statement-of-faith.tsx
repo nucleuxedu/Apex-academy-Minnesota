@@ -33,8 +33,8 @@ const statements = [
 export default function StatementOfFaithPage() {
   return (
     <PageShell
-      title="Statement of Faith - Veritas Academy"
-      description="The statement of faith of Veritas Academy."
+      title="Statement of Faith - Apex Academy Minnesota"
+      description="The statement of faith of Apex Academy Minnesota."
       showWhatSetsApart
       sidebar={<LinkCard title="About" links={aboutLinks} />}
     >
@@ -58,7 +58,7 @@ export default function StatementOfFaithPage() {
         We believe that Biblically the term “marriage” means the uniting of one man and one woman in a single, exclusive union, as delineated in Scripture. (Gen. 2:18-25.)
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        We believe that every person must be afforded compassion, love, kindness, respect, and dignity. (Mark 12:28-31; Luke 6:31.) Hateful and harassing behavior or attitudes directed toward any individual are to be repudiated and are not in accord with Scripture nor the doctrines of Veritas Chapel, Veritas Academy and all Veritas related ministries.
+        We believe that every person must be afforded compassion, love, kindness, respect, and dignity. (Mark 12:28-31; Luke 6:31.) Hateful and harassing behavior or attitudes directed toward any individual are to be repudiated and are not in accord with Scripture nor the doctrines of Apex Chapel, Apex Academy Minnesota and all Apex related ministries.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         <strong>Christ’s Return</strong>

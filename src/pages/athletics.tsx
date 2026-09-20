@@ -10,13 +10,13 @@ import { programLinks } from "@/data/site";
 export default function AthleticsPage() {
   return (
     <PageShell
-      title="Athletics - Veritas Academy"
-      description="Athletics at Veritas Academy provides opportunities for students to learn sportsmanship within a Biblical context."
+      title="Athletics - Apex Academy Minnesota"
+      description="Athletics at Apex Academy Minnesota provides opportunities for students to learn sportsmanship within a Biblical context."
       showWhatSetsApart
       sidebar={<LinkCard title="Program Overview" links={programLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Veritas and Athletics
+        Apex  and Athletics
       </Typography>
       <ContentImage src="https://veritasclassical.org/wp-content/uploads/2024/09/Cristian_Victory.png" alt="Athletics victory" sx={{ mb: 2 }} />
       <Typography variant="body1" sx={{ mb: 2, fontStyle: "italic" }}>
@@ -36,10 +36,10 @@ export default function AthleticsPage() {
         Note that some options are seasonal depending on weather. Students not participating in competitive sports are still required to participate in Physical Education.
       </Typography>
       <Typography variant="h2" sx={{ mb: 1 }}>
-        Philosophy of Athletics at Veritas
+        Philosophy of Athletics at Apex 
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Athletics at Veritas Academy provides opportunities for students to learn sportsmanship within a Biblical context. Since God has seen fit to integrate the material and the immaterial, the visible and the invisible, we strive to teach our students that God is glorified in how they use their bodies, as well as their minds and spirits. Beginning with physical education in the lower grades, we instill in our students the Biblical principles found in the following Scripture verses:
+        Athletics at Apex Academy Minnesota provides opportunities for students to learn sportsmanship within a Biblical context. Since God has seen fit to integrate the material and the immaterial, the visible and the invisible, we strive to teach our students that God is glorified in how they use their bodies, as well as their minds and spirits. Beginning with physical education in the lower grades, we instill in our students the Biblical principles found in the following Scripture verses:
       </Typography>
       <Typography variant="body1" sx={{ mb: 1 }}>
         Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength (Mark 12:30).

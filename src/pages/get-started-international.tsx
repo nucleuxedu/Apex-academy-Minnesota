@@ -11,10 +11,10 @@ import { lifeAtVeritasLinks, site } from "@/data/site";
 export default function GetStartedInternationalPage() {
   return (
     <PageShell
-      title="International Student Get Started - Veritas Academy"
+      title="International Student Get Started - Apex Academy Minnesota"
       description="Follow the steps below to begin the international student admissions process."
       showWhatSetsApart={false}
-      sidebar={<LinkCard title="Life at Veritas" links={lifeAtVeritasLinks} />}
+      sidebar={<LinkCard title="Life at Apex" links={lifeAtVeritasLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
         Get Started
@@ -90,9 +90,9 @@ export default function GetStartedInternationalPage() {
         ))}
       </List>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        As a member of the Association of Classical & Christian Schools (ACCS), Veritas Academy is committed to providing the best possible education to help your child reach their God-given potential. As our society faces unending challenges that threaten the fabric of our culture and long held values, Veritas Academy is committed to ensuring that every person that comes to us knows that they have infinite value and worth and that they are seen, loved, cared for, and protected.
+        As a member of the Association of Classical & Christian Schools (ACCS), Apex Academy Minnesota is committed to providing the best possible education to help your child reach their God-given potential. As our society faces unending challenges that threaten the fabric of our culture and long held values, Apex Academy Minnesota is committed to ensuring that every person that comes to us knows that they have infinite value and worth and that they are seen, loved, cared for, and protected.
       </Typography>
-      <ExperienceVeritas title="Why Choose Veritas?" />
+      <ExperienceVeritas title="Why Choose Apex?" />
     </PageShell>
   );
 }

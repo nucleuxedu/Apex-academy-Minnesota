@@ -12,12 +12,12 @@ import { artsLinks } from "@/data/site";
 export default function OrchestraPage() {
   return (
     <PageShell
-      title="Veritas Conservatory of Music - Veritas Academy"
+      title="Apex Conservatory of Music - Apex Academy Minnesota"
       description="Students grow in skill and confidence as they learn from internationally recognized musicians."
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Veritas Conservatory of Music
+        Apex Conservatory of Music
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         Students grow in skill and confidence as they learn from internationally recognized musicians in a conservatory style program that fits within a classical Christian education.
@@ -26,7 +26,7 @@ export default function OrchestraPage() {
         Students’ appreciation and mastery of music
       </Typography>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        Music at Veritas is both rigorous and welcoming. Students build strong foundations, develop musicianship, and gain the discipline that supports learning in every subject.
+        Music at Apex is both rigorous and welcoming. Students build strong foundations, develop musicianship, and gain the discipline that supports learning in every subject.
       </Typography>
       <Typography variant="body1" sx={{ mb: 1 }}>
         Learn from an internationally renowned musician, Givi Sarkisian
@@ -108,7 +108,7 @@ export default function OrchestraPage() {
       />
       <ContentImage src="https://veritasclassical.org/wp-content/uploads/2026/01/Brass-Lesson.png" title="Brass Lesson" alt="Brass Lesson" sx={{ mb: 2 }} />
       <Typography variant="body1" sx={{ mb: 3 }}>
-        In 2022, the American Guild of Musical Artists (AGMA) recognized Givi Sarkisian as an internationally acclaimed multi-instrumentalist and educator with extraordinary abilities. And now at Veritas Academy, he is inviting musicians of all skill levels and all ages to join him to make music as part of an orchestra, choir, laureates of various music competitions, or beginning and exploration. Givi takes an individual approach for each student and selects the most suitable musical instrument based on the strengths of each student.
+        In 2022, the American Guild of Musical Artists (AGMA) recognized Givi Sarkisian as an internationally acclaimed multi-instrumentalist and educator with extraordinary abilities. And now at Apex Academy Minnesota, he is inviting musicians of all skill levels and all ages to join him to make music as part of an orchestra, choir, laureates of various music competitions, or beginning and exploration. Givi takes an individual approach for each student and selects the most suitable musical instrument based on the strengths of each student.
       </Typography>
       <FacultyGrid />
     </PageShell>

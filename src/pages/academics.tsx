@@ -10,16 +10,16 @@ import { exploreLinks } from "@/data/site";
 export default function AcademicsPage() {
   return (
     <PageShell
-      title="Academics at Veritas - Veritas Academy"
+      title="Academics at Apex  - Apex Academy Minnesota"
       description="A classical Christian education that develops clear thinking, strong habits, and a well-ordered life."
       showWhatSetsApart
-      sidebar={<LinkCard title="Explore Veritas" links={exploreLinks} />}
+      sidebar={<LinkCard title="Explore Apex " links={exploreLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Academics at Veritas
+        Academics at Apex 
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        At Veritas Academy, we provide a classical Christian education that develops clear thinking, strong habits, and a well-ordered life.
+        At Apex Academy Minnesota, we provide a classical Christian education that develops clear thinking, strong habits, and a well-ordered life.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         Students are taught to read carefully, think logically, and communicate clearly. Through the study of the liberal arts and the pursuit of what is true, good, and beautiful, they grow in both understanding and maturity.
@@ -129,7 +129,7 @@ export default function AcademicsPage() {
           What This Leads To
         </Typography>
         <Typography variant="body1" sx={{ mb: 1 }}>
-          Students who graduate from Veritas Academy are able to:
+          Students who graduate from Apex Academy Minnesota are able to:
         </Typography>
         <List>
           {[

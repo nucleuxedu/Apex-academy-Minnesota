@@ -8,16 +8,16 @@ import { knowVeritasLinks } from "@/data/site";
 export default function TuitionPage() {
   return (
     <PageShell
-      title="Tuition & Financial Aid Information - Veritas Academy"
-      description="Veritas Academy offers indexed tuition, allowing tuition rates to be adjusted based on each family’s financial circumstances."
+      title="Tuition & Financial Aid Information - Apex Academy Minnesota"
+      description="Apex Academy Minnesota offers indexed tuition, allowing tuition rates to be adjusted based on each family’s financial circumstances."
       showWhatSetsApart
-      sidebar={<LinkCard title="Know Veritas" links={knowVeritasLinks} />}
+      sidebar={<LinkCard title="Know Apex " links={knowVeritasLinks} />}
     >
       <Typography variant="h2" sx={{ mb: 2 }}>
         Tuition & Financial Information
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Veritas Academy offers indexed tuition, allowing tuition rates to be adjusted based on each family’s financial circumstances. This approach makes a classical Christian education accessible to a wide range of families.
+        Apex Academy Minnesota offers indexed tuition, allowing tuition rates to be adjusted based on each family’s financial circumstances. This approach makes a classical Christian education accessible to a wide range of families.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         To estimate your tuition, please use the calculator below.

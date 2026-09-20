@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "veritasclassical.org",
+        hostname: "Apex Academy Minnesotaclassical.org",
       },
     ],
   },

@@ -10,7 +10,7 @@ import { experienceCards } from "@/data/site";
 
 type Props = { title?: string };
 
-export default function ExperienceVeritas({ title = "Experience Veritas" }: Props) {
+export default function ExperienceVeritas({ title = "Experience Apex" }: Props) {
   return (
     <Box sx={{ mt: 5, mb: 1 }}>
       <Container maxWidth="xl" disableGutters>

@@ -10,13 +10,13 @@ import { exploreLinks } from "@/data/site";
 export default function InternationalStudentCostPage() {
   return (
     <PageShell
-      title="International Students Cost - Veritas Academy"
+      title="International Students Cost - Apex Academy Minnesota"
       description="The international student program cost is broken down below."
       showWhatSetsApart={false}
-      sidebar={<LinkCard title="Explore Veritas" links={exploreLinks} />}
+      sidebar={<LinkCard title="Explore Apex " links={exploreLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Cost of Studying at Veritas
+        Cost of Studying at Apex 
       </Typography>
       <Typography variant="body1" sx={{ mb: 1 }}>
         The international student program cost is broken down below:

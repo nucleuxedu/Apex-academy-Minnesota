@@ -4,8 +4,8 @@ import PageShell from "@/components/layout/PageShell";
 export default function PrivacyPolicyPage() {
   return (
     <PageShell
-      title="Privacy Policy - Veritas Academy Chisago City MN"
-      description="Privacy policy for veritasclassical.org."
+      title="Privacy Policy - Apex Academy Minnesota Chisago City MN"
+      description="Privacy policy for Apex Academy Minnesota.org."
       showWhatSetsApart={false}
       showTestimonials={false}
     >

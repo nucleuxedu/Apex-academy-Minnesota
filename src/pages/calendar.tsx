@@ -9,8 +9,8 @@ const CalendarWiz = dynamic(() => import("@/components/embeds/CalendarWiz"), { s
 export default function CalendarPage() {
   return (
     <PageShell
-      title="School Calendar - Veritas Academy Chisago City MN"
-      description="Upcoming events at Veritas Academy."
+      title="School Calendar - Apex Academy Minnesota Chisago City MN"
+      description="Upcoming events at Apex Academy Minnesota."
       showWhatSetsApart={false}
       sidebar={<LinkCard title="Upcoming Events" links={aboutLinks} />}
     >

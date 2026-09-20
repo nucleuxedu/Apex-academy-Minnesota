@@ -9,9 +9,9 @@ import { knowVeritasLinks, site } from "@/data/site";
 export default function ContactPage() {
   return (
     <PageShell
-      title="Contact Us - Veritas Academy Chisago City MN"
+      title="Contact Us - Apex Academy Minnesota Chisago City MN"
       description="Call us at 763.670.0793 or complete the inquiry form. We will follow up with you shortly."
-      sidebar={<LinkCard title="Know Veritas" links={knowVeritasLinks} />}
+      sidebar={<LinkCard title="Know Apex " links={knowVeritasLinks} />}
     >
       <Typography variant="h1" align="center" sx={{ mb: 2 }}>
         Contact Us

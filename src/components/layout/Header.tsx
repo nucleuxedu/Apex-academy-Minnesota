@@ -100,10 +100,10 @@ export default function Header() {
         </Container>
       </Box> */}
 
-      <AppBar position="static" elevation={0} sx={{ bgcolor: colors.paper, color: colors.ink, borderBottom: "1px solid", borderColor: "divider" }}>
+      <AppBar position="static" elevation={0} sx={{ bgcolor: colors.ink, color: colors.platinum, borderBottom: "1px solid", borderColor: "rgba(197,201,209,0.22)" }}>
         <Toolbar
           sx={{
-            minHeight: { xs: 76, md: 92 },
+            minHeight: { xs: 84, md: 104 },
             px: { xs: 2, md: 3 },
             gap: 2,
             justifyContent: "space-between",
@@ -115,7 +115,7 @@ export default function Header() {
               src={site.logo.src}
               srcSet={`${site.logo.src} 1x, ${site.logo.retina} 2x`}
               alt={site.logo.alt}
-              sx={{ height: { xs: 52, md: 68 }, width: "auto" }}
+              sx={{ height: { xs: 64, md: 84 }, width: "auto" }}
             />
           </Box>
           <Box sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center", gap: 0.25, flexWrap: "wrap", justifyContent: "flex-end" }}>
@@ -136,17 +136,17 @@ export default function Header() {
                     }
                   }}
                   sx={{
-                    color: isDonate ? colors.ink : active ? "primary.main" : colors.ink,
+                    color: isDonate ? colors.ink : active ? "secondary.main" : colors.platinum,
                     bgcolor: isDonate ? "secondary.main" : "transparent",
                     fontWeight: active || isDonate ? 700 : 600,
                     fontSize: "0.78rem",
-                    letterSpacing: "0.06em",
+                    letterSpacing: "0.08em",
                     px: 1.4,
                     minWidth: 0,
                     borderBottom: active && !isDonate ? "2px solid" : "2px solid transparent",
                     borderColor: active && !isDonate ? "secondary.main" : "transparent",
                     borderRadius: 0,
-                    "&:hover": { bgcolor: isDonate ? "#d4b57a" : "rgba(107,28,34,0.06)" },
+                    "&:hover": { bgcolor: isDonate ? "#dfe3ea" : "rgba(197,201,209,0.12)" },
                   }}
                 >
                   {item.label}
@@ -154,7 +154,7 @@ export default function Header() {
               );
             })}
           </Box>
-          <IconButton sx={{ display: { xs: "inline-flex", lg: "none" } }} onClick={() => setDrawerOpen(true)} aria-label="Open menu">
+          <IconButton sx={{ display: { xs: "inline-flex", lg: "none" }, color: "secondary.main" }} onClick={() => setDrawerOpen(true)} aria-label="Open menu">
             <MenuIcon />
           </IconButton>
         </Toolbar>

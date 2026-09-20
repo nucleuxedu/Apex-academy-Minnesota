@@ -10,8 +10,8 @@ import { aboutLinks, site } from "@/data/site";
 export default function AboutPage() {
   return (
     <PageShell
-      title="About Veritas - Veritas Academy Chisago City MN"
-      description="Veritas Academy is a classical Christian school dedicated to the cultivation of wisdom and virtue."
+      title="About Apex  - Apex Academy Minnesota Chisago City MN"
+      description="Apex Academy Minnesota is a classical Christian school dedicated to the cultivation of wisdom and virtue."
       showWhatSetsApart={false}
       sidebar={
         <>
@@ -52,14 +52,14 @@ export default function AboutPage() {
       }
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        About Veritas
+        About Apex 
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Veritas Academy is a classical Christian school dedicated to the cultivation of wisdom and virtue.
+        Apex Academy Minnesota is a classical Christian school dedicated to the cultivation of wisdom and virtue.
       </Typography>
       <IframeEmbed src="https://player.vimeo.com/video/508172433?autoplay=0&autopause=0" title="Vimeo video player 1" height={350} />
       <Typography variant="body1" sx={{ mb: 2 }}>
-        At Veritas Academy, learning is designed to engage both the mind and the heart. Students are challenged to ask thoughtful questions, examine ideas carefully, develop sound reasoning, and communicate clearly.
+        At Apex Academy Minnesota, learning is designed to engage both the mind and the heart. Students are challenged to ask thoughtful questions, examine ideas carefully, develop sound reasoning, and communicate clearly.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         Rather than focusing solely on the accumulation of information, we seek to cultivate wisdom and virtue through meaningful engagement with enduring ideas, important questions, and the accumulated wisdom of generations who have devoted themselves to the pursuit of truth and a deeper understanding of God, ourselves, and the world around us.
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <SiteLink href={site.restfulLearningUrl}>restful learning environment</SiteLink>, limited screen use, meaningful relationships, and purposeful use of time, students are given opportunities to develop responsibility, self-management, healthy relationships, and sound judgment. Teachers know their students well and provide both encouragement and challenge as they grow.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        At Veritas, education extends beyond academics. Students are encouraged to develop curiosity, perseverance, ownership, responsibility, and sound judgment while learning to engage thoughtfully with the world around them. Over time, students develop the wisdom, habits, and maturity necessary to thrive in the responsibilities, relationships, and realities of adult life.
+        At Apex , education extends beyond academics. Students are encouraged to develop curiosity, perseverance, ownership, responsibility, and sound judgment while learning to engage thoughtfully with the world around them. Over time, students develop the wisdom, habits, and maturity necessary to thrive in the responsibilities, relationships, and realities of adult life.
       </Typography>
       <Typography variant="body1" sx={{ fontStyle: "italic", mb: 3 }}>
         Then you will understand the fear of the Lord and find the knowledge of God. For the Lord gives wisdom; from His mouth come knowledge and understanding. –Proverbs 2:5-6

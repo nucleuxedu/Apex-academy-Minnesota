@@ -8,8 +8,8 @@ import { artsLinks, site } from "@/data/site";
 export default function TheatreArtsPage() {
   return (
     <PageShell
-      title="Theatre Arts - Veritas Academy"
-      description="‘Twas The Night Before Christmas at Veritas Chapel."
+      title="Theatre Arts - Apex Academy Minnesota"
+      description="‘Twas The Night Before Christmas at Apex Chapel."
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 1 }}>
@@ -25,7 +25,7 @@ export default function TheatreArtsPage() {
         at
       </Typography>
       <Typography variant="h3" sx={{ mb: 0.5 }}>
-        Veritas Chapel
+        Apex Chapel
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         34888 Kable Avenue

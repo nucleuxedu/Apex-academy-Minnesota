@@ -19,10 +19,10 @@ export default function HomePage() {
   return (
     <PageFade>
       <Head>
-        <title>Veritas Academy Classical Education - Veritas Academy Chisago City MN</title>
+        <title>Apex Academy Minnesota Classical Education - Apex Academy Minnesota Chisago City MN</title>
         <meta
           name="description"
-          content="Veritas Academy is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education."
+          content="Apex Academy Minnesota is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education."
         />
       </Head>
 
@@ -90,7 +90,7 @@ export default function HomePage() {
               variant="h1"
               sx={{ color: "#fbf6ee", mb: 2, fontSize: { xs: "2.4rem", md: "4rem" }, fontWeight: 500 }}
             >
-              Classical Education at Veritas Academy
+              Classical Education at Apex Academy Minnesota
             </Typography>
             <Typography
               variant="h2"
@@ -137,7 +137,7 @@ export default function HomePage() {
           </Typography>
           <Box sx={{ width: 48, height: 2, bgcolor: "secondary.main", mx: "auto", mb: 2 }} />
           <Typography variant="body1" sx={{ mb: 3, textAlign: "center" }}>
-            Hear from a Veritas parent about why their family chose a classical Christian education.
+            Hear from a Apex parent about why their family chose a classical Christian education.
           </Typography>
           <IframeEmbed src="https://player.vimeo.com/video/725494617?autoplay=0&autopause=0" title="Vimeo video player 1" height={360} />
         </Container>

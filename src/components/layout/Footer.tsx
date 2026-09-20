@@ -40,9 +40,6 @@ export default function Footer() {
                 href="/"
                 sx={{
                   display: "inline-flex",
-                  bgcolor: colors.paper,
-                  px: 1.5,
-                  py: 1,
                   mb: 2.5,
                 }}
               >
@@ -129,7 +126,7 @@ export default function Footer() {
                       borderRadius: 0,
                       width: 42,
                       height: 42,
-                      "&:hover": { bgcolor: "#d4b57a" },
+                      "&:hover": { bgcolor: "#dfe3ea" },
                     }}
                   >
                     {item.label === "Facebook" ? <FacebookIcon /> : item.label === "Instagram" ? <InstagramIcon /> : <EmailIcon />}
@@ -143,11 +140,11 @@ export default function Footer() {
 
       <Box
         sx={{
-          bgcolor: "#100e0c",
-          color: "rgba(244,239,230,0.78)",
+          bgcolor: "#050505",
+          color: "rgba(232,234,238,0.72)",
           py: 2.25,
           borderTop: "1px solid",
-          borderColor: "rgba(196,162,101,0.28)",
+          borderColor: "rgba(197,201,209,0.22)",
         }}
       >
         <Container maxWidth="xl">

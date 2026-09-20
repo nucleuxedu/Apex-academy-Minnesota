@@ -9,10 +9,10 @@ import { knowVeritasLinks, site } from "@/data/site";
 export default function GetStartedPage() {
   return (
     <PageShell
-      title="Get Started - Veritas Academy"
+      title="Get Started - Apex Academy Minnesota"
       description="Follow the steps below to begin the admissions process."
       showWhatSetsApart
-      sidebar={<LinkCard title="Know Veritas" links={knowVeritasLinks} />}
+      sidebar={<LinkCard title="Know Apex " links={knowVeritasLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
         Get Started
@@ -44,7 +44,7 @@ export default function GetStartedPage() {
       </Typography>
 
       <Typography variant="h4" sx={{ mb: 1 }}>
-        Step 2: Visit Veritas
+        Step 2: Visit Apex 
       </Typography>
       <Typography variant="body1" sx={{ mb: 1 }}>
         Contact us to schedule a time to visit our campus.
@@ -52,7 +52,7 @@ export default function GetStartedPage() {
       <Typography variant="body1">During your visit, you will:</Typography>
       <List>
         {[
-          "See what your child can expect in daily life at Veritas",
+          "See what your child can expect in daily life at Apex ",
           "Tour the campus",
           "Ask questions and learn more about our approach",
         ].map((item) => (

@@ -10,7 +10,7 @@ export default function Testimonials() {
   return (
     <Section bg={colors.ink} color="#f4efe6">
       <SectionHeading kicker="Voices" light>
-        What Everyone Is Saying About Veritas
+        What Everyone Is Saying About Apex 
       </SectionHeading>
       <Grid container spacing={3}>
         {testimonials.map((quote) => (

@@ -12,7 +12,7 @@ import { whatSetsApart } from "@/data/site";
 export default function WhatSetsApart() {
   return (
     <Section sx={{ bgcolor: "background.paper" }}>
-      <SectionHeading kicker="Distinctives">What Sets Veritas Apart?</SectionHeading>
+      <SectionHeading kicker="Distinctives">What Sets Apex  Apart?</SectionHeading>
       <Grid container spacing={3}>
         {whatSetsApart.map((item, index) => (
           <Grid key={item.title} size={{ xs: 12, sm: 6, md: 3 }}>

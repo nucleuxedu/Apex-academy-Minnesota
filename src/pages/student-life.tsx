@@ -20,16 +20,16 @@ const gallery = [
 export default function StudentLifePage() {
   return (
     <PageShell
-      title="Student Life - Veritas Academy"
-      description="Life at Veritas Academy is shaped by structure, responsibility, and meaningful relationships."
+      title="Student Life - Apex Academy Minnesota"
+      description="Life at Apex Academy Minnesota is shaped by structure, responsibility, and meaningful relationships."
       showWhatSetsApart={false}
       showTestimonials={false}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Student Life at Veritas
+        Student Life at Apex 
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Life at Veritas Academy is shaped by structure, responsibility, and meaningful relationships.
+        Life at Apex Academy Minnesota is shaped by structure, responsibility, and meaningful relationships.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         Students live within a consistent daily rhythm that supports both academic growth and personal development. Expectations are clear, routines are steady, and students are guided to take ownership of their time, their work, and their conduct.
@@ -63,7 +63,7 @@ export default function StudentLifePage() {
         Residential Life (Boarding Option)
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Veritas Academy offers an optional residential program for both domestic and international students who desire a structured living environment.
+        Apex Academy Minnesota offers an optional residential program for both domestic and international students who desire a structured living environment.
       </Typography>
       <Typography variant="body1" sx={{ mb: 1 }}>
         Residential life extends the same principles found in the classroom into daily living.
@@ -122,7 +122,7 @@ export default function StudentLifePage() {
         Daily Life Beyond the Classroom
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Student life at Veritas extends beyond academics.
+        Student life at Apex  extends beyond academics.
       </Typography>
       <Typography variant="body1" sx={{ mb: 1 }}>
         Students have opportunities to build friendships, participate in activities, and enjoy the surrounding community in appropriate and structured ways.

@@ -43,8 +43,8 @@ export default function InternationalStudentsPage() {
   const { openInquiry } = useInquiry();
   return (
     <PageShell
-      title="Veritas Academy International Students - Veritas Academy Chisago City MN"
-      description="Veritas Academy is a private international boarding school in Chisago City, MN, serving students from over 16 countries"
+      title="Apex Academy Minnesota International Students - Apex Academy Minnesota Chisago City MN"
+      description="Apex Academy Minnesota is a private international boarding school in Chisago City, MN, serving students from over 16 countries"
       showWhatSetsApart={false}
       showTestimonials
       below={
@@ -55,7 +55,7 @@ export default function InternationalStudentsPage() {
       }
     >
       <Typography variant="h3" sx={{ mb: 0.5 }}>
-        Veritas Academy
+        Apex Academy Minnesota
       </Typography>
       <Typography variant="h3" sx={{ mb: 3, fontStyle: "italic" }}>
         Grounded in Truth. Guided by Wisdom. Marked by Virtue.
@@ -76,7 +76,7 @@ export default function InternationalStudentsPage() {
       </Box>
       <InternationalInquiryForm />
       <Typography variant="h2" sx={{ mb: 3 }}>
-        Why Veritas
+        Why Apex 
       </Typography>
       <Grid container spacing={3} sx={{ mb: 4 }}>
         {why.map((item) => (
@@ -94,10 +94,10 @@ export default function InternationalStudentsPage() {
         ))}
       </Grid>
       <Typography variant="h2" sx={{ mb: 1 }}>
-        Experience Veritas International
+        Experience Apex  International
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Students at Veritas don’t just study in the United States, they live, learn, and grow within a structured, supportive community. From the classroom to daily life, they are immersed in language, relationships, and meaningful experiences that shape both character and understanding.
+        Students at Apex  don’t just study in the United States, they live, learn, and grow within a structured, supportive community. From the classroom to daily life, they are immersed in language, relationships, and meaningful experiences that shape both character and understanding.
       </Typography>
       <Button variant="contained" href="/get-started-international" sx={{ mb: 4 }}>
         LET’S GET STARTED

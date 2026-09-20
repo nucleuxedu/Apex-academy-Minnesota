@@ -12,7 +12,7 @@ import SiteLink from "@/components/common/SiteLink";
 import { programLinks, site, whyChooseVeritasAlt } from "@/data/site";
 
 const quotes = [
-  "“The minute I walked through the doors of Veritas, I knew things would be different this time. I don’t have to worry about bullying here. We are all like a family. The teachers truly and honestly care about us.”",
+  "“The minute I walked through the doors of Apex, I knew things would be different this time. I don’t have to worry about bullying here. We are all like a family. The teachers truly and honestly care about us.”",
   "“Class sizes were small, instruction was differentiated to the individual students.”",
   "“The school recognized my children’s abilities right away, and taught them at their skill level instead of their ages. Today, my 8 year old is taking 5th grade math and my 10 year old is taking pre-algebra.”",
 ];
@@ -28,13 +28,13 @@ const videos = [
 export default function TestimonialsPage() {
   return (
     <PageShell
-      title="What Parents Are Saying - Veritas Academy"
-      description="Hear why other parents are choosing Veritas."
+      title="What Parents Are Saying - Apex Academy Minnesota"
+      description="Hear why other parents are choosing Apex."
       showWhatSetsApart={false}
       sidebar={<LinkCard title="Academic Levels" links={programLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 3 }}>
-        Hear why other parents are choosing Veritas
+        Hear why other parents are choosing Apex
       </Typography>
       {quotes.map((quote) => (
         <Typography key={quote} variant="body1" sx={{ mb: 2, fontStyle: "italic" }}>
@@ -70,7 +70,7 @@ export default function TestimonialsPage() {
         <SiteLink href="https://veritasclassical.org/step-2/">Step 2</SiteLink>
       </Typography>
       <Typography variant="h2" sx={{ mb: 3 }}>
-        Why Choose Veritas?
+        Why Choose Apex?
       </Typography>
       <Grid container spacing={3}>
         {whyChooseVeritasAlt.map((item) => (

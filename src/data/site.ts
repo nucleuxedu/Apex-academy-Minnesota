@@ -1,8 +1,8 @@
 export const site = {
-  name: "Veritas Academy",
+  name: "Apex academy Minnesota",
   tagline: "Grounded in Truth. Guided by Wisdom. Marked by Virtue.",
   description:
-    "Veritas Academy is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education.",
+    "Apex Academy Minnesota is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education.",
   url: "https://veritasclassical.org/",
   phoneDisplay: "763.670.0793",
   phoneTel: "7636700793",
@@ -10,35 +10,35 @@ export const site = {
   admissionsPhoneTel: "6514623894",
   factsPhoneDisplay: "1 877-303-3039",
   factsPhoneTel: "18773033039",
-  email: "admissions@veritasclassical.org",
-  generalEmail: "v@veritasclassical.org",
-  presidentEmail: "President@veritasclassical.org",
+  email: "info@apexacademyminnesota.org",
+  generalEmail: "v@Apex classical.org",
+  presidentEmail: "President@apexacademyminnesota.org",
   hours: "Monday – Friday: 8:00 AM – 3:30 PM",
   taxId: "26-2949017",
   logo: {
-    src: "https://veritasclassical.org/wp-content/uploads/2020/02/Weblogo-110h.png",
-    retina: "https://veritasclassical.org/wp-content/uploads/2020/03/logo-220so.png",
-    mobileRetina: "https://veritasclassical.org/wp-content/uploads/2020/02/Weblogo-220h.png",
+    src: "/images/logo.png",
+    retina: "/images/logo.png",
+    mobileRetina: "/images/logo.png",
     width: 421,
     height: 110,
-    alt: "Veritas Academy Chisago City MN Logo",
+    alt: "Minnesota Preparatory Academy Logo",
   },
-  favicon: "https://veritasclassical.org/wp-content/uploads/2020/02/cropped-Veritas-Site-Icon-32x32.png",
-  appleIcon: "https://veritasclassical.org/wp-content/uploads/2020/02/cropped-Veritas-Site-Icon-180x180.png",
+  favicon: "/favicon.ico",
+  appleIcon: "/images/logo.png",
   locations: [
     {
-      title: "Veritas Academy",
+      title: "Apex academy Minnesota",
       lines: ["11723 Stinson Avenue", "Chisago City, MN 55013"],
     },
     {
-      title: "Veritas Chapel",
+      title: "Apex chapel",
       lines: ["34888 Kable Avenue", "North Branch, MN 55056"],
     },
   ],
   social: [
-    { label: "Facebook", href: "https://www.facebook.com/veritasgecko/" },
-    { label: "Instagram", href: "https://www.instagram.com/veritasclassic" },
-    { label: "Email", href: "mailto:v@veritasclassical.org" },
+    { label: "Facebook", href: "https://www.facebook.com/apexacademyminnesota/" },
+    { label: "Instagram", href: "https://www.instagram.com/apexacademyminnesota" },
+    { label: "Email", href: "mailto:info@apexacademyminnesota.org" },
   ],
   apps: {
     android: {
@@ -53,7 +53,7 @@ export const site = {
     },
   },
   copyright:
-    "Veritas Academy is a private K-12 classical Christian school serving North Branch, Cambridge, Forest Lake, Wyoming, Lindstrom, Stacy, Isanti, Chisago City.",
+    "Apex academy Minnesota is a private K-12 classical Christian school serving North Branch, Cambridge, Forest Lake, Wyoming, Lindstrom, Stacy, Isanti, Chisago City.",
   inquiryFormSrc: "https://api.leadconnectorhq.com/widget/form/uMUqtnL839IeTkgFajGQ",
   contactFormSrc: "https://api.leadconnectorhq.com/widget/form/QRvSMV7Wwj8onyoDkoZ7",
   givebutterId: "pdQN9j",
@@ -92,7 +92,7 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: "Tuition & Financial Information", href: "/tuition" },
-  { label: "About Veritas", href: "/about" },
+  { label: "About Apex ", href: "/about" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Donate", href: "/donate" },
 ];
@@ -118,16 +118,16 @@ export const programLinks = [
   { label: "School of Rhetoric (9-12)", href: "/academics#rhetoric" },
   { label: "Athletics", href: "/athletics" },
   { label: "The Arts", href: "/the-arts" },
-  { label: "Veritas Conservatory of Music", href: "/orchestra-and-more" },
-  { label: "Veritas Conservatory of Music Lessons", href: "/orchestra-and-more-lessons" },
+  { label: "Apex  Conservatory of Music", href: "/orchestra-and-more" },
+  { label: "Apex  Conservatory of Music Lessons", href: "/orchestra-and-more-lessons" },
   { label: "Theatre", href: "/theatre-arts" },
 ];
 
 export const artsLinks = [
-  { label: "Veritas Conservatory of Music", href: "/orchestra-and-more" },
-  { label: "Veritas Conservatory of Music Lessons", href: "/orchestra-and-more-lessons" },
+  { label: "Apex  Conservatory of Music", href: "/orchestra-and-more" },
+  { label: "Apex  Conservatory of Music Lessons", href: "/orchestra-and-more-lessons" },
   { label: "Theatre Arts", href: "/theatre-arts" },
-  { label: "Christmas at Veritas", href: "/christmas-at-veritas" },
+  { label: "Christmas at Apex ", href: "/christmas-at-veritas" },
   { label: "Sights and Sounds", href: "/sights-and-sounds" },
 ];
 
@@ -137,7 +137,7 @@ export const lifeAtVeritasLinks = [
   { label: "Student Life", href: "/student-life" },
   { label: "Athletics", href: "/athletics" },
   { label: "The Arts", href: "/the-arts" },
-  { label: "SCIENCE at Veritas", href: "/science" },
+  { label: "SCIENCE at Apex ", href: "/science" },
 ];
 
 export const exploreLinks = [
@@ -148,10 +148,10 @@ export const exploreLinks = [
 ];
 
 export const testimonials = [
-  "We want the best life for our child. A best life starts with a strong foundation. Veritas Academy is that foundation. We couldn’t be happier with our choice to choose Veritas.",
-  "Because of Veritas Academy’s commitment to students, my children are motivated to learn, they are challenged at their skill level instead of being held back due to their ages.",
+  "We want the best life for our child. A best life starts with a strong foundation. Apex Academy Minnesota is that foundation. We couldn’t be happier with our choice to choose Apex .",
+  "Because of Apex Academy Minnesota’s commitment to students, my children are motivated to learn, they are challenged at their skill level instead of being held back due to their ages.",
   "Transition from other educational models is seamlessly supported. Staff and teachers are proactive and caring to the smallest detail. Leadership goes above and beyond for ALL students.",
-  "Veritas Academy prepared my child for college. His biology professor said his papers are some of the best first-time college papers she has ever seen.",
+  "Apex Academy Minnesota prepared my child for college. His biology professor said his papers are some of the best first-time college papers she has ever seen.",
 ];
 
 export const whatSetsApart = [
@@ -277,7 +277,7 @@ export const experienceCards = [
     title: "Learn Proficient English",
     image: "https://veritasclassical.org/wp-content/uploads/2022/07/Language2.png",
     imageTitle: "Language Learning",
-    body: "During your education at Veritas, you will be able to achieve proficiency as you practice with native speakers in the classroom and throughout your stay.",
+    body: "During your education at Apex , you will be able to achieve proficiency as you practice with native speakers in the classroom and throughout your stay.",
   },
   {
     title: "Experience American Culture",

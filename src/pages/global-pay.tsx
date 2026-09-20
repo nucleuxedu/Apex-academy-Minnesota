@@ -28,16 +28,16 @@ const walkthroughs = [
 export default function GlobalPayPage() {
   return (
     <PageShell
-      title="Global Pay - Veritas Academy"
-      description="Veritas Academy and Convera GlobalPay for Students have partnered through FACTS to provide a convenient way for you to make payments."
+      title="Global Pay - Apex Academy Minnesota"
+      description="Apex Academy Minnesota and Convera GlobalPay for Students have partnered through FACTS to provide a convenient way for you to make payments."
       showWhatSetsApart={false}
-      sidebar={<LinkCard title="Life at Veritas" links={lifeAtVeritasLinks} />}
+      sidebar={<LinkCard title="Life at Apex" links={lifeAtVeritasLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
         Global Pay
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Veritas Academy and Convera GlobalPay for Students have partnered through FACTS to provide a convenient way for you to make payments for your tuition and other fees. This allows you to pay in your home currency, either online or by bank transfer, with competitive exchange rates and takes the stress and uncertainty out of paying for your tuition.
+        Apex Academy Minnesota and Convera GlobalPay for Students have partnered through FACTS to provide a convenient way for you to make payments for your tuition and other fees. This allows you to pay in your home currency, either online or by bank transfer, with competitive exchange rates and takes the stress and uncertainty out of paying for your tuition.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         You can make a payment from a wide selection of payment methods that are popular in your home country including: WeChat Pay, ALIPAY, UnionPay, ChinaPay and many more.
@@ -48,7 +48,7 @@ export default function GlobalPayPage() {
         {[
           "Pay tuition in your local currency.",
           "Pay online from your mobile, tablet, desktop devices or by bank transfer.",
-          "Rest assured knowing your payments are received in full by Veritas Academy.",
+          "Rest assured knowing your payments are received in full by Apex Academy Minnesota.",
         ].map((item) => (
           <ListItem key={item} sx={{ display: "list-item", listStyleType: "disc", ml: 3, px: 0 }}>
             {item}

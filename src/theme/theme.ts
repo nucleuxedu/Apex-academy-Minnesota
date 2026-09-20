@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
+import { Cinzel, Source_Sans_3 } from "next/font/google";
 
 export const sourceSans = Source_Sans_3({
   weight: ["400", "600", "700"],
@@ -7,68 +7,71 @@ export const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
-export const cormorant = Cormorant_Garamond({
+export const cinzel = Cinzel({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
-  style: ["normal", "italic"],
 });
 
-const oxblood = "#6b1c22";
-const gold = "#c4a265";
-const ink = "#171411";
-const muted = "#6b6258";
-const parchment = "#f3ece1";
-const paper = "#fcfaf5";
-const bone = "#e4d8c4";
-const navy = "#2a2420";
+const black = "#0a0a0a";
+const ink = "#0b0b0d";
+const silver = "#c5c9d1";
+const platinum = "#666B75";
+const muted = "#6a6f78";
+const frost = "#f3f4f6";
+const paper = "#ffffff";
+const bone = "#d5d8de";
+const navy = "#121316";
 
 const theme = createTheme({
   palette: {
-    primary: { main: oxblood, contrastText: "#fbf6ee" },
-    secondary: { main: gold, contrastText: "#171411" },
-    background: { default: parchment, paper },
+    primary: { main: black, contrastText: platinum },
+    secondary: { main: silver, contrastText: black },
+    background: { default: frost, paper },
     text: { primary: ink, secondary: muted },
     divider: bone,
   },
   typography: {
     fontFamily: sourceSans.style.fontFamily,
     h1: {
-      fontFamily: cormorant.style.fontFamily,
+      fontFamily: cinzel.style.fontFamily,
       fontWeight: 500,
-      fontSize: "clamp(2.2rem, 4vw, 3.4rem)",
+      fontSize: "clamp(2.1rem, 4vw, 3.2rem)",
       lineHeight: 1.12,
-      letterSpacing: "-0.02em",
-      color: oxblood,
+      letterSpacing: "0.04em",
+      color: black,
     },
     h2: {
-      fontFamily: cormorant.style.fontFamily,
+      fontFamily: cinzel.style.fontFamily,
       fontWeight: 500,
-      fontSize: "clamp(1.7rem, 2.6vw, 2.35rem)",
-      lineHeight: 1.2,
-      color: oxblood,
+      fontSize: "clamp(1.55rem, 2.5vw, 2.2rem)",
+      lineHeight: 1.22,
+      letterSpacing: "0.03em",
+      color: black,
     },
     h3: {
-      fontFamily: cormorant.style.fontFamily,
+      fontFamily: cinzel.style.fontFamily,
       fontWeight: 600,
-      fontSize: "1.45rem",
+      fontSize: "1.4rem",
       lineHeight: 1.3,
+      letterSpacing: "0.02em",
       color: ink,
     },
     h4: {
-      fontFamily: cormorant.style.fontFamily,
+      fontFamily: cinzel.style.fontFamily,
       fontWeight: 600,
-      fontSize: "1.28rem",
+      fontSize: "1.22rem",
       lineHeight: 1.35,
-      color: oxblood,
+      letterSpacing: "0.02em",
+      color: black,
     },
     overline: {
-      fontFamily: sourceSans.style.fontFamily,
-      fontWeight: 700,
-      fontSize: "0.72rem",
-      letterSpacing: "0.22em",
+      fontFamily: cinzel.style.fontFamily,
+      fontWeight: 600,
+      fontSize: "0.7rem",
+      letterSpacing: "0.28em",
       textTransform: "uppercase",
-      color: gold,
+      color: silver,
     },
     body1: { fontSize: "1.05rem", lineHeight: 1.8, color: ink },
     body2: { fontSize: "0.95rem", lineHeight: 1.7, color: muted },
@@ -76,7 +79,7 @@ const theme = createTheme({
       fontFamily: sourceSans.style.fontFamily,
       textTransform: "none",
       fontWeight: 700,
-      letterSpacing: "0.04em",
+      letterSpacing: "0.06em",
     },
   },
   shape: { borderRadius: 0 },
@@ -88,11 +91,14 @@ const theme = createTheme({
           padding: "11px 22px",
           transition: "background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease",
         },
-        contained: { boxShadow: "none", "&:hover": { boxShadow: "none", backgroundColor: "#54151a" } },
+        contained: {
+          boxShadow: "none",
+          "&:hover": { boxShadow: "none", backgroundColor: "#1c1c1e" },
+        },
         outlined: {
-          borderColor: gold,
-          color: oxblood,
-          "&:hover": { borderColor: oxblood, backgroundColor: "rgba(196,162,101,0.12)" },
+          borderColor: silver,
+          color: black,
+          "&:hover": { borderColor: black, backgroundColor: "rgba(197,201,209,0.16)" },
         },
       },
     },
@@ -106,14 +112,14 @@ const theme = createTheme({
           transition: "transform 0.35s ease, border-color 0.35s ease",
           "&:hover": {
             transform: "translateY(-6px)",
-            borderColor: gold,
+            borderColor: silver,
           },
         },
       },
     },
     MuiLink: {
       styleOverrides: {
-        root: { color: oxblood, fontWeight: 700, textUnderlineOffset: 3 },
+        root: { color: black, fontWeight: 700, textUnderlineOffset: 3 },
       },
     },
     MuiAppBar: {
@@ -122,11 +128,11 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: parchment,
+          backgroundColor: frost,
           backgroundImage:
-            "radial-gradient(ellipse at top, rgba(196,162,101,0.12), transparent 55%), linear-gradient(180deg, #f7f1e8 0%, #f3ece1 100%)",
+            "radial-gradient(ellipse at top, rgba(197,201,209,0.28), transparent 55%), linear-gradient(180deg, #f7f8fa 0%, #f3f4f6 100%)",
         },
-        a: { color: oxblood },
+        a: { color: black },
         img: { maxWidth: "100%", height: "auto" },
         blockquote: { margin: 0 },
       },
@@ -136,14 +142,17 @@ const theme = createTheme({
 
 export default theme;
 export const colors = {
-  burgundy: oxblood,
-  oxblood,
-  gold,
+  burgundy: black,
+  oxblood: black,
+  gold: silver,
   ink,
   muted,
-  cream: parchment,
-  parchment,
+  cream: frost,
+  parchment: frost,
   paper,
   bone,
   navy,
+  black,
+  silver,
+  platinum,
 };

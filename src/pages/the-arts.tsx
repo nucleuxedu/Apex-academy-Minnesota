@@ -9,8 +9,8 @@ import { artsLinks } from "@/data/site";
 export default function TheArtsPage() {
   return (
     <PageShell
-      title="The Arts - Veritas Academy"
-      description="The arts at Veritas are taught with purpose as part of a classical Christian education."
+      title="The Arts - Apex Academy Minnesota"
+      description="The arts at Apex are taught with purpose as part of a classical Christian education."
       showWhatSetsApart
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >
@@ -44,13 +44,13 @@ export default function TheArtsPage() {
         When the Lord speaks about art in His Word, it is often in the context of skilled craftsmen and gifted design work. Philippians 4:8 calls us to dwell on what is true, honorable, and beautiful.
       </Typography>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        That is why the arts at Veritas are taught with purpose. Students learn skills, discipline, and excellence as part of a classical Christian education, and the work is offered back to God in worship and gratitude.
+        That is why the arts at Apex are taught with purpose. Students learn skills, discipline, and excellence as part of a classical Christian education, and the work is offered back to God in worship and gratitude.
       </Typography>
       <Typography variant="h2" sx={{ mb: 1 }}>
         Our Methods
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Veritas trains students systematically in the foundational skills of art, then builds toward projects that combine skill, practice, and careful observation. Students practice copying from another picture, still life, or design to develop precision and patience.
+        Apex trains students systematically in the foundational skills of art, then builds toward projects that combine skill, practice, and careful observation. Students practice copying from another picture, still life, or design to develop precision and patience.
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
         Music study gives students space to explore gifts God has given them. The grammar stage provides a broad base of introductory knowledge that helps students discover what they enjoy and guides future elective choices.
@@ -63,7 +63,7 @@ export default function TheArtsPage() {
       </Typography>
       <ContentImage src="https://veritasclassical.org/wp-content/uploads/2022/07/Artprogram-Award.png" title="Art Program Award" alt="Art Program Award" sx={{ mb: 1 }} />
       <Typography variant="body1">
-        Two Veritas Academy students won the 2022 “My District, My Minnesota” State Senate Art Contest. 2,000 statewide entries were submitted.
+        Two Apex Academy Minnesota students won the 2022 “My District, My Minnesota” State Senate Art Contest. 2,000 statewide entries were submitted.
       </Typography>
     </PageShell>
   );

@@ -147,7 +147,7 @@ export default function InternationalInquiryForm() {
         </Grid>
       </Grid>
       <Typography variant="body2" sx={{ my: 2 }}>
-        By submitting this form, you agree to receive information about Veritas Academy. We respect your privacy. View our{" "}
+        By submitting this form, you agree to receive information about Apex Academy Minnesota. We respect your privacy. View our{" "}
         <SiteLink href="/privacy-policy">Privacy Policy</SiteLink>.
       </Typography>
       <Button type="submit" variant="contained">

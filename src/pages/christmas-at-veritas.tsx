@@ -23,15 +23,15 @@ const shows = [
 export default function ChristmasPage() {
   return (
     <PageShell
-      title="Christmas at Veritas - Veritas Academy"
-      description="Christmas is a magical time at Veritas. Music and drama are an integral part of our Christmas season."
+      title="Christmas at Apex  - Apex Academy Minnesota"
+      description="Christmas is a magical time at Apex . Music and drama are an integral part of our Christmas season."
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Christmas at Veritas Through the Years
+        Christmas at Apex  Through the Years
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Christmas is a magical time at Veritas. Music and drama are an integral part of our Christmas season, and students travel through time as they become part of both traditional and contemporary programs that remind us of the reason for the season
+        Christmas is a magical time at Apex . Music and drama are an integral part of our Christmas season, and students travel through time as they become part of both traditional and contemporary programs that remind us of the reason for the season
       </Typography>
       <Typography variant="body1">Past shows include:</Typography>
       <List>
@@ -42,10 +42,10 @@ export default function ChristmasPage() {
         ))}
       </List>
       <Typography variant="body1" sx={{ mb: 1 }}>
-        Be part of Christmas at Veritas!!!
+        Be part of Christmas at Apex !!!
       </Typography>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        Join us every first week of December as Veritas students awaken the Christmas spirit through a selection of timeless music and drama. Come celebrate with us as we reflect on the reason for Christmas.
+        Join us every first week of December as Apex  students awaken the Christmas spirit through a selection of timeless music and drama. Come celebrate with us as we reflect on the reason for Christmas.
       </Typography>
       <ContentImage src="https://veritasclassical.org/wp-content/uploads/2026/04/Narnia-Witch.png" title="The Narnia Witch" alt="The Narnia Witch" sx={{ mb: 1 }} />
       <Typography variant="h4">Performance Opportunities</Typography>

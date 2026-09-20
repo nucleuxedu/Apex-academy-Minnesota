@@ -14,7 +14,7 @@ const values = [
   {
     title: "Excellence",
     lead: "Noble living.",
-    body: "Excellence at Veritas is not perfectionism. It is doing what is right, doing it well, and honoring God through steady effort and integrity.",
+    body: "Excellence at Apex  is not perfectionism. It is doing what is right, doing it well, and honoring God through steady effort and integrity.",
   },
   {
     title: "Character",
@@ -36,7 +36,7 @@ const values = [
 export default function CoreValuesPage() {
   return (
     <PageShell
-      title="Core Values - Veritas Academy"
+      title="Core Values - Apex Academy Minnesota"
       description="Core values shape how we teach, how we lead, and how we care for students."
       showWhatSetsApart
       sidebar={<LinkCard title="About" links={aboutLinks} />}
@@ -45,7 +45,7 @@ export default function CoreValuesPage() {
         Core Values
       </Typography>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        Core values shape how we teach, how we lead, and how we care for students. At Veritas Academy, these values guide daily life in the classroom, on campus, and in community.
+        Core values shape how we teach, how we lead, and how we care for students. At Apex Academy Minnesota, these values guide daily life in the classroom, on campus, and in community.
       </Typography>
       <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
         <Grid size={{ xs: 12, sm: 4, md: 3 }}>

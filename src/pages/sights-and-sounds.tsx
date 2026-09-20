@@ -19,15 +19,15 @@ const shows = [
 export default function SightsAndSoundsPage() {
   return (
     <PageShell
-      title="Sights and Sounds - Veritas Academy"
-      description="Sights and Sounds is a highlight of the spring season at Veritas."
+      title="Sights and Sounds - Apex Academy Minnesota"
+      description="Sights and Sounds is a highlight of the spring season at Apex."
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>
-        Sights and Sounds at Veritas Through the Years
+        Sights and Sounds at Apex Through the Years
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        Sights and Sounds is a highlight of the spring season at Veritas. Theatre and music are integral to this time of year, as students bring stories to life on stage through both classic and contemporary productions that engage, delight, and inspire.
+        Sights and Sounds is a highlight of the spring season at Apex. Theatre and music are integral to this time of year, as students bring stories to life on stage through both classic and contemporary productions that engage, delight, and inspire.
       </Typography>
       <Typography variant="body1">Past shows include:</Typography>
       <List>
@@ -38,10 +38,10 @@ export default function SightsAndSoundsPage() {
         ))}
       </List>
       <Typography variant="body1" sx={{ mb: 1 }}>
-        Be part of Sights and Sounds at Veritas!!!
+        Be part of Sights and Sounds at Apex!!!
       </Typography>
       <Typography variant="body1" sx={{ mb: 3 }}>
-        Join us each first week of May as Veritas students bring stories to life through theatre and music. Come and experience an afternoon that engages, delights, and inspires.
+        Join us each first week of May as Apex students bring stories to life through theatre and music. Come and experience an afternoon that engages, delights, and inspires.
       </Typography>
       <ContentImage src="https://veritasclassical.org/wp-content/uploads/2026/04/Narnia-Witch.png" title="The Narnia Witch" alt="The Narnia Witch" sx={{ mb: 1 }} />
       <Typography variant="h4">Performance Opportunities</Typography>
