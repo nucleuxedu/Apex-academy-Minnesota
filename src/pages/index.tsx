@@ -116,7 +116,8 @@ export default function HomePage() {
           <Grid container spacing={3} sx={{ alignItems: "center" }}>
             <Grid size={{ xs: 12, md: 9 }}>
               <Typography variant="h2" sx={{ color: "#f4efe6", fontSize: { xs: "1.35rem", md: "1.85rem" }, fontWeight: 400 }}>
-                A classical Christian, K-12 school that grounds students in Biblical truth, providing academic and spiritual foundations for college bound students.
+              
+Apex Academy Minnesota is an exclusive K-12 and Post Graduate institution that provides quality education and elite training for students. Our knowledgeable staff is committed to the success of our students and their future. We welcome you to explore what we do and how Apex Academy Minnesota can help you achieve your goals.
               </Typography>
             </Grid>
             <Grid size={{ xs: 12, md: 3 }}>

@@ -105,6 +105,13 @@ export const aboutLinks = [
   { label: "Contact Us", href: "/contact-us" },
 ];
 
+export const distinctivesLinks = [
+  { label: "Small Class Sizes", href: "/class-size" },
+  { label: "Christian Formation", href: "/christianformation" },
+  { label: "Academic Placement", href: "/academic-placement" },
+  { label: "Intentional Teaching", href: "/intentional-teaching" },
+];
+
 export const knowVeritasLinks = [
   { label: "Core Values", href: "/core-values" },
   { label: "Statement of Faith", href: "/statement-of-faith" },
@@ -159,28 +166,28 @@ export const whatSetsApart = [
     title: "Small Class Sizes",
     image: "https://veritasclassical.org/wp-content/uploads/2024/09/Small-Class-Sizes.png",
     imageTitle: "Small Class Sizes",
-    href: "https://veritasclassical.org/class-size/",
+    href: "/class-size",
     body: "Students are known and taught with intention. Teachers understand each student’s strengths and needs, allowing for meaningful growth that large classrooms cannot provide.",
   },
   {
     title: "Christian Formation",
     image: "https://veritasclassical.org/wp-content/uploads/2024/09/Prayer.png",
     imageTitle: "Prayer",
-    href: "https://veritasclassical.org/christianformation/",
+    href: "/christianformation",
     body: "Students are grounded in Biblical truth and taught to live with wisdom and virtue. In a culture that often pulls in the opposite direction, we provide clarity, direction, and consistency.",
   },
   {
     title: "Academic Placement",
     image: "https://veritasclassical.org/wp-content/uploads/2024/09/Academic-Acceleration.png",
     imageTitle: "Academic Acceleration",
-    href: "https://veritasclassical.org/academic-placement/",
+    href: "/academic-placement",
     body: "Students are placed according to ability and readiness, allowing them to be challenged without being overwhelmed. Instruction is structured, purposeful, and responsive to each student’s progress.",
   },
   {
     title: "Intentional Teaching",
     image: "https://veritasclassical.org/wp-content/uploads/2024/09/Caring-Teachers_2024.png",
     imageTitle: "Caring Teachers_2024",
-    href: "https://veritasclassical.org/intentional-teaching/",
+    href: "/intentional-teaching",
     body: "Teachers build strong relationships with students while maintaining clear expectations. Students are supported, challenged, and held accountable in a consistent and structured environment.",
   },
 ];
@@ -190,28 +197,28 @@ export const whyChooseVeritasAlt = [
     title: "Small Class Sizes",
     image: "https://veritasclassical.org/wp-content/uploads/2024/05/SmallClass2021-300x191.png",
     imageTitle: "SmallClass2021",
-    href: "https://veritasclassical.org/class-size/",
+    href: "/class-size",
     body: "Your child will get the attention they need to succeed and will be given opportunities that wouldn’t be available to them in a larger class setting.",
   },
   {
     title: "Christian Values",
     image: "https://veritasclassical.org/wp-content/uploads/2024/05/praying_600383-300x192.jpg",
     imageTitle: "Group of people praying with Holy Bible at home, closeup",
-    href: "https://veritasclassical.org/christianformation/",
+    href: "/christianformation",
     body: "Your child will be taught Biblical values that are instrumental in leading all of us towards goodness, love and hope in a world that oftentimes seems hopeless.",
   },
   {
     title: "Academic Acceleration",
     image: "https://veritasclassical.org/wp-content/uploads/2024/05/Science13_600383-300x192.jpg",
     imageTitle: "Science13_600383",
-    href: "https://veritasclassical.org/academic-acceleration/",
+    href: "/academic-placement",
     body: "Your child will not be held back or pushed too far forward. We ensure each student is appropriately placed based on ability, giftedness and motivation.",
   },
   {
     title: "Caring Teachers",
     image: "https://veritasclassical.org/wp-content/uploads/2024/05/Greek-Class_740472-300x191.jpg",
     imageTitle: "Greek Class_740472",
-    href: "https://veritasclassical.org/caring-teachers",
+    href: "/intentional-teaching",
     body: "Your child will be loved and cared for by highly trained staff committed to nurturing every student in a safe and supportive learning environment.",
   },
 ];
