@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <PageShell
       title="Contact Us - Apex Academy Minnesota Chisago City MN"
-      description="Call us at 763.670.0793 or complete the inquiry form. We will follow up with you shortly."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       sidebar={<LinkCard title="Know Apex " links={knowVeritasLinks} />}
     >
       <Typography variant="h1" align="center" sx={{ mb: 2 }}>

@@ -20,10 +20,7 @@ export default function HomePage() {
     <PageFade>
       <Head>
         <title>Apex Academy Minnesota Classical Education - Apex Academy Minnesota Chisago City MN</title>
-        <meta
-          name="description"
-          content="Apex Academy Minnesota is a private school, in Chisago City, MN, where we love well in pursuit of Excellence, through a classical education."
-        />
+       
       </Head>
 
       <Box
@@ -131,7 +128,7 @@ Apex Academy Minnesota is an exclusive K-12 and Post Graduate institution that p
 
       <WhatSetsApart />
 
-      <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: "background.default" }}>
+      {/* <Box sx={{ py: { xs: 6, md: 8 }, bgcolor: "background.default" }}>
         <Container maxWidth="md">
           <Typography variant="overline" sx={{ display: "block", textAlign: "center", mb: 1 }}>
             Parent story
@@ -142,7 +139,7 @@ Apex Academy Minnesota is an exclusive K-12 and Post Graduate institution that p
           </Typography>
           <IframeEmbed src="https://player.vimeo.com/video/725494617?autoplay=0&autopause=0" title="Vimeo video player 1" height={360} />
         </Container>
-      </Box>
+      </Box> */}
 
       <Pillars />
       <Testimonials />

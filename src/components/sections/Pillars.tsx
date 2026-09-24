@@ -19,8 +19,8 @@ const icons = {
 export default function Pillars() {
   return (
     <Section
-      bg={colors.oxblood}
-      color="#fbf6ee"
+      bg="#ffffff"
+      color="#000000"
       sx={{
         backgroundImage: "linear-gradient(180deg, rgba(23,20,17,0.18), rgba(23,20,17,0.08))",
       }}
@@ -35,8 +35,8 @@ export default function Pillars() {
               sx={{
                 px: 3,
                 py: { xs: 3, md: 1 },
-                borderRight: { md: index < 3 ? "1px solid rgba(196,162,101,0.28)" : "none" },
-                borderBottom: { xs: index < 3 ? "1px solid rgba(196,162,101,0.28)" : "none", md: "none" },
+                borderRight: { md: index < 3 ? "1px solid #000000" : "none" },
+                borderBottom: { xs: index < 3 ? "1px solid #000000" : "none", md: "none" },
                 textAlign: "center",
               }}
             >
@@ -49,19 +49,19 @@ export default function Pillars() {
                   display: "grid",
                   placeItems: "center",
                   border: "1px solid",
-                  borderColor: "secondary.main",
-                  color: "secondary.main",
+                  borderColor: "#000000",
+                  color: "#000000",
                 }}
               >
                 <Icon />
               </Box>
-              <Typography variant="overline" sx={{ display: "block", mb: 0.5 }}>
+              <Typography variant="overline" sx={{ display: "block", mb: 0.5, color: "#000000" }}>
                 {item.subtitle}
               </Typography>
-              <Typography variant="h2" sx={{ color: "#fbf6ee", mb: 1.5 }}>
+              <Typography variant="h2" sx={{ color: "#000000", mb: 1.5 }}>
                 {item.title}
               </Typography>
-              <Typography sx={{ color: "rgba(251,246,238,0.88)" }} align="center">
+              <Typography sx={{ color: "#000000" }} align="center">
                 {item.body}
               </Typography>
             </Grid>

@@ -10,7 +10,7 @@ export default function TheArtsPage() {
   return (
     <PageShell
       title="The Arts - Apex Academy Minnesota"
-      description="The arts at Apex are taught with purpose as part of a classical Christian education."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >

@@ -24,7 +24,7 @@ export default function ChristmasPage() {
   return (
     <PageShell
       title="Christmas at Apex  - Apex Academy Minnesota"
-      description="Christmas is a magical time at Apex . Music and drama are an integral part of our Christmas season."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       sidebar={<LinkCard title="The Arts" links={artsLinks} />}
     >
       <Typography variant="h1" sx={{ mb: 2 }}>

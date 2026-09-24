@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <PageShell
       title="About Apex  - Apex Academy Minnesota Chisago City MN"
-      description="Apex Academy Minnesota is a classical Christian school dedicated to the cultivation of wisdom and virtue."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart={false}
       sidebar={
         <>

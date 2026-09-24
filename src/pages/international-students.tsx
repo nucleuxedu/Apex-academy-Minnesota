@@ -44,7 +44,7 @@ export default function InternationalStudentsPage() {
   return (
     <PageShell
       title="Apex Academy Minnesota International Students - Apex Academy Minnesota Chisago City MN"
-      description="Apex Academy Minnesota is a private international boarding school in Chisago City, MN, serving students from over 16 countries"
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart={false}
       showTestimonials
       below={

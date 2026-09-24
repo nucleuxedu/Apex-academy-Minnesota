@@ -37,7 +37,7 @@ export default function CoreValuesPage() {
   return (
     <PageShell
       title="Core Values - Apex Academy Minnesota"
-      description="Core values shape how we teach, how we lead, and how we care for students."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart
       sidebar={<LinkCard title="About" links={aboutLinks} />}
     >

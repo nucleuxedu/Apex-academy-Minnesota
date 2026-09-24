@@ -11,7 +11,7 @@ export default function AthleticsPage() {
   return (
     <PageShell
       title="Athletics - Apex Academy Minnesota"
-      description="Athletics at Apex Academy Minnesota provides opportunities for students to learn sportsmanship within a Biblical context."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart
       sidebar={<LinkCard title="Program Overview" links={programLinks} />}
     >

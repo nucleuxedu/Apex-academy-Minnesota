@@ -10,7 +10,7 @@ export default function ClassSizePage() {
   return (
     <PageShell
       title="Class Size - Apex Academy Minnesota"
-      description="At Apex Academy Minnesota, small class sizes allow teachers to know students well and teach with intention."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart
       sidebar={<LinkCard title="What Sets Apex Apart" links={distinctivesLinks} />}
     >

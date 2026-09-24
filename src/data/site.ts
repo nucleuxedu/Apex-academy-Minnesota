@@ -53,7 +53,7 @@ export const site = {
     },
   },
   copyright:
-    "Apex academy Minnesota is a private K-12 classical Christian school serving North Branch, Cambridge, Forest Lake, Wyoming, Lindstrom, Stacy, Isanti, Chisago City.",
+    "Apex academy Minnesota is a private K-12 school serving Chisago City, MN.",
   inquiryFormSrc: "https://api.leadconnectorhq.com/widget/form/uMUqtnL839IeTkgFajGQ",
   contactFormSrc: "https://api.leadconnectorhq.com/widget/form/QRvSMV7Wwj8onyoDkoZ7",
   givebutterId: "pdQN9j",
@@ -107,7 +107,6 @@ export const aboutLinks = [
 
 export const distinctivesLinks = [
   { label: "Small Class Sizes", href: "/class-size" },
-  { label: "Christian Formation", href: "/christianformation" },
   { label: "Academic Placement", href: "/academic-placement" },
   { label: "Intentional Teaching", href: "/intentional-teaching" },
 ];
@@ -170,13 +169,6 @@ export const whatSetsApart = [
     body: "Students are known and taught with intention. Teachers understand each student’s strengths and needs, allowing for meaningful growth that large classrooms cannot provide.",
   },
   {
-    title: "Christian Formation",
-    image: "https://veritasclassical.org/wp-content/uploads/2024/09/Prayer.png",
-    imageTitle: "Prayer",
-    href: "/christianformation",
-    body: "Students are grounded in Biblical truth and taught to live with wisdom and virtue. In a culture that often pulls in the opposite direction, we provide clarity, direction, and consistency.",
-  },
-  {
     title: "Academic Placement",
     image: "https://veritasclassical.org/wp-content/uploads/2024/09/Academic-Acceleration.png",
     imageTitle: "Academic Acceleration",
@@ -199,13 +191,6 @@ export const whyChooseVeritasAlt = [
     imageTitle: "SmallClass2021",
     href: "/class-size",
     body: "Your child will get the attention they need to succeed and will be given opportunities that wouldn’t be available to them in a larger class setting.",
-  },
-  {
-    title: "Christian Values",
-    image: "https://veritasclassical.org/wp-content/uploads/2024/05/praying_600383-300x192.jpg",
-    imageTitle: "Group of people praying with Holy Bible at home, closeup",
-    href: "/christianformation",
-    body: "Your child will be taught Biblical values that are instrumental in leading all of us towards goodness, love and hope in a world that oftentimes seems hopeless.",
   },
   {
     title: "Academic Acceleration",
@@ -244,7 +229,7 @@ export const pillars = [
   },
   {
     title: "Grow",
-    subtitle: "Christian Formation",
+    subtitle: "Growth",
     body: "Students grow in understanding and maturity through daily practice of faith, responsibility, and virtue.",
     icon: "menu_book" as const,
   },

@@ -15,7 +15,7 @@ export default function WhatSetsApart() {
       <SectionHeading kicker="Distinctives">What Sets Apex  Apart?</SectionHeading>
       <Grid container spacing={3}>
         {whatSetsApart.map((item, index) => (
-          <Grid key={item.title} size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid key={item.title} size={{ xs: 12, sm: 4 }}>
             <Card sx={{ height: "100%", overflow: "hidden" }}>
               <Box sx={{ position: "relative", overflow: "hidden" }}>
                 <ContentImage
@@ -48,7 +48,7 @@ export default function WhatSetsApart() {
                 <Typography variant="body1">
                   {item.body}{" "}
                   <SiteLink href={item.href}>
-                    Learn more{item.title === "Small Class Sizes" || item.title === "Christian Formation" ? "" : "."}
+                    Learn more{item.title === "Small Class Sizes" ? "" : "."}
                   </SiteLink>
                 </Typography>
               </CardContent>

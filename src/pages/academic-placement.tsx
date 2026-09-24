@@ -17,7 +17,7 @@ export default function AcademicPlacementPage() {
   return (
     <PageShell
       title="Academic Placement - Apex Academy Minnesota"
-      description="We place students according to their ability, not age. Children who are bright often display signs that they need more from their educational situation."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart
       sidebar={<LinkCard title="What Sets Apex Apart" links={distinctivesLinks} />}
     >

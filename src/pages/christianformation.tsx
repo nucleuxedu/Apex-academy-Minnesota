@@ -10,7 +10,7 @@ export default function ChristianFormationPage() {
   return (
     <PageShell
       title="Christian Formation - Apex Academy Minnesota"
-      description="At Apex Academy Minnesota, Christian formation is not an addition to education, it is foundational to it."
+      description="Apex Academy Minnesota is a private K-12 school serving Chisago City, MN."
       showWhatSetsApart
       sidebar={<LinkCard title="What Sets Apex Apart" links={distinctivesLinks} />}
     >
