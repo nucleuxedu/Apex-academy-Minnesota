@@ -6,7 +6,11 @@ import ContentImage from "@/components/common/ContentImage";
 import LinkCard from "@/components/sections/LinkCard";
 import { distinctivesLinks, whatSetsApart } from "@/data/site";
 
-const distinctive = whatSetsApart[3];
+const distinctive = whatSetsApart.find((item) => item.href === "/intentional-teaching") ?? {
+  title: "Intentional Teaching",
+  image: "https://veritasclassical.org/wp-content/uploads/2024/09/Caring-Teachers_2024.png",
+  imageTitle: "Caring Teachers_2024",
+};
 const teacherQualities = [
   "Are trained in classical Christian education",
   "Have experience working with children and adolescents",

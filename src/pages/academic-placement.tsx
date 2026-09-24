@@ -6,7 +6,11 @@ import ContentImage from "@/components/common/ContentImage";
 import LinkCard from "@/components/sections/LinkCard";
 import { distinctivesLinks, whatSetsApart } from "@/data/site";
 
-const distinctive = whatSetsApart[2];
+const distinctive = whatSetsApart.find((item) => item.href === "/academic-placement") ?? {
+  title: "Academic Placement",
+  image: "https://veritasclassical.org/wp-content/uploads/2024/09/Academic-Acceleration.png",
+  imageTitle: "Academic Acceleration",
+};
 const whoItHelps = [
   "are not being challenged at their current level",
   "need a stronger academic foundation",

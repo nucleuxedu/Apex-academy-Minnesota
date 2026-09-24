@@ -4,7 +4,11 @@ import ContentImage from "@/components/common/ContentImage";
 import LinkCard from "@/components/sections/LinkCard";
 import { distinctivesLinks, whatSetsApart } from "@/data/site";
 
-const distinctive = whatSetsApart[0];
+const distinctive = whatSetsApart.find((item) => item.href === "/class-size") ?? {
+  title: "Small Class Sizes",
+  image: "https://veritasclassical.org/wp-content/uploads/2024/09/Small-Class-Sizes.png",
+  imageTitle: "Small Class Sizes",
+};
 
 export default function ClassSizePage() {
   return (
